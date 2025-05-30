@@ -1,0 +1,109 @@
+﻿
+
+
+
+    <MudText Typo="Typo.h5">Register</MudText>
+
+    <MudForm @ref="registerForm" Model="@registerModel" @bind-IsValid="@registerSuccess" >
+
+        <MudTextField
+            T="string"
+            Label="Mail"
+            @bind-Value= "registerModel.Mail"
+            Required="true"
+            RequiredError="Mail required"
+            Variant ="Variant.Outlined"
+            Class="mb-4"
+            Adornment="Adornment.End"
+            AdornmentIcon="@Icons.Material.Filled.Mail" 
+            />
+
+        <MudTextField T="string"
+                      Label="Password"
+                      @bind-Value="registerModel.Password"
+                      Required="true"
+                      RequiredError="Password required"
+                      Variant="Variant.Outlined"
+                      Class="mb-4"
+                      Adornment="Adornment.End"
+                      AdornmentIcon="@PasswordInputIcon"
+                      InputType="@inputTypePassword"
+                      OnAdornmentClick="ShowPwd"
+                      />
+
+
+        <MudTextField T="string"
+                      Label="Confirm password"
+                      @bind-Value="@confirmPassword"
+                      Required="true"
+                      RequiredError="Password required"
+                      Variant="Variant.Outlined"
+                      Class="mb-4"
+                      Adornment="Adornment.End"
+                      AdornmentIcon="@PasswordInputIcon"
+                      InputType="@inputTypePassword"
+                      OnAdornmentClick="ShowPwd" />
+
+        <MudTextField T="string"
+                      Label="Lastname"
+                      @bind-Value="registerModel.Lastname"
+                      Required="true"
+                      RequiredError="Lastname required"
+                      Variant="Variant.Outlined"
+                      Class="mb-4"
+                      Adornment="Adornment.End"
+                      AdornmentIcon="@Icons.Material.Filled.Person" />
+
+        <MudTextField T="string"
+                      Label="Firstname"
+                      @bind-Value="registerModel.Firstname"
+                      Required="true"
+                      RequiredError="Firstname required"
+                      Variant="Variant.Outlined"
+                      Class="mb-4"
+                      Adornment="Adornment.End"
+                      AdornmentIcon="@Icons.Material.Filled.Person" />
+
+    </MudForm>
+
+     <div class="d-flex justify-space-between align-center">
+            <MudButton Variant="Variant.Filled"
+                       Color="Color.Primary"
+                       Class="m-lg-auto mb-4"
+                       OnClick="@SubmitRegister"
+                       Disabled="@(!registerSuccess)">
+                Register
+            </MudButton>
+    </div>
+
+
+
+
+
+@code {
+
+
+    private bool _showPassword;
+    private InputType inputTypePassword = InputType.Password;
+    string PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
+
+
+    private void ShowPwd()
+    {
+
+        if (_showPassword)
+        {
+            _showPassword = false;
+            PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
+            inputTypePassword = InputType.Password;
+        }
+        else
+        {
+            _showPassword = true;
+            PasswordInputIcon = Icons.Material.Filled.Visibility;
+            inputTypePassword = InputType.Text;
+        }
+
+    }
+
+}

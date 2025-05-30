@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp2", "BlazorApp2\BlazorApp2.csproj", "{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{842BE691-2A50-49C1-96F7-3800B4221528}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "AppEntities\Entities.csproj", "{26462382-5048-40C8-945B-2CC51F65834C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{842BE691-2A50-49C1-96F7-3800B4221528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{842BE691-2A50-49C1-96F7-3800B4221528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{842BE691-2A50-49C1-96F7-3800B4221528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{842BE691-2A50-49C1-96F7-3800B4221528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26462382-5048-40C8-945B-2CC51F65834C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26462382-5048-40C8-945B-2CC51F65834C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26462382-5048-40C8-945B-2CC51F65834C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26462382-5048-40C8-945B-2CC51F65834C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00034563-F71D-4FD8-8DD3-17A1CEB29F14}
+	EndGlobalSection
+EndGlobal

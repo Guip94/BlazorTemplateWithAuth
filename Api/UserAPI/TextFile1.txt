@@ -1,0 +1,20 @@
+NOTES :
+
+
+
+
+
+DB E6K
+
+Data Source=E6K-VDI20506\TFTIC;Initial Catalog=UserDbPFF;Integrated Security=True;Trust Server Certificate=True
+
+
+
+checker la mise en place du hashage du pwd
+
+
+
+
+
+découper User => user infos
+adress => adress infos (basé sur userid == adressid)

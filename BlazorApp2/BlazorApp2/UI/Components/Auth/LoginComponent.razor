@@ -1,0 +1,73 @@
+﻿
+
+
+
+    <MudText Typo="Typo.h5" Class="mb-4">Login</MudText>
+
+    <MudForm @ref="loginForm" Model="@loginModel" @bind-IsValid="@_loginSuccess">
+        <MudTextField T="string"
+                      @bind-Value="loginModel.Mail"
+                      Label="Mail"
+                      Required="true"
+                      RequiredError="mail required"
+                      Variant="Variant.Outlined"
+                      Class="mb-4"
+                      Adornment="Adornment.End"
+                      AdornmentIcon="@Icons.Material.Filled.Mail" />
+
+
+        <MudTextField T="string"
+                      @bind-Value="loginModel.Pwd"
+                      Label="Password"
+                      Required="true"
+                      RequiredError="Password required"
+                      Variant="Variant.Outlined"
+                      Class="mb-4"
+                      Adornment="Adornment.End"
+                      AdornmentIcon="@PasswordInputIcon"
+                      InputType="@inputTypePwd"
+                      OnAdornmentClick="ShowPwd" />
+
+
+
+        <div class="d-flex justify-space-between align-center">
+            <MudButton Variant="Variant.Filled"
+                       Color="Color.Primary"
+                       Class="m-lg-auto mb-4"
+                       OnClick="@SubmitLogin"
+                       Disabled="@(!_loginSuccess)">
+                Login in
+            </MudButton>
+
+
+
+
+
+        </div>
+    </MudForm>
+
+
+
+@code {
+    private bool _showPassword;
+    private InputType inputTypePwd = InputType.Password;
+    string PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
+    private void ShowPwd()
+    {
+
+        if (_showPassword)
+        {
+            _showPassword = false;
+            PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
+            inputTypePwd = InputType.Password;
+        }
+        else
+        {
+
+            _showPassword = true;
+            PasswordInputIcon = Icons.Material.Filled.Visibility;
+            inputTypePwd = InputType.Text;
+        }
+
+    }
+}

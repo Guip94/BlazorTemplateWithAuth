@@ -1,0 +1,54 @@
+﻿
+
+
+
+
+
+<MudNavMenu>
+    <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home" IconColor="Color.Primary">Home</MudNavLink>
+
+
+    <AuthorizeView>
+        <Authorized>
+            <MudNavLink OnClick="Logout" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Handshake" IconColor="Color.Primary">
+                <MudText> Logout </MudText>
+            </MudNavLink>
+
+        </Authorized>
+
+
+        <NotAuthorized>
+
+            <MudNavGroup Title="Auth" Expanded="true">
+
+                <MudNavLink Href="/loginregister" Icon="@Icons.Material.Filled.Person" Match="NavLinkMatch.Prefix">Login</MudNavLink>
+
+                <MudNavLink Href="/loginregister" Icon="@Icons.Material.Filled.Person" Match="NavLinkMatch.Prefix">Register</MudNavLink>
+
+            </MudNavGroup>
+
+        </NotAuthorized>
+
+    </AuthorizeView>
+
+
+</MudNavMenu>
+
+@code {
+
+
+
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+
+
+
+
+
+}

@@ -1,0 +1,292 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices\\blazorapp2\\blazorapp2\\ui\\components\\auth\\logincomponent.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\ui\\components\\auth\\logincomponent.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices\\blazorapp2\\blazorapp2\\ui\\components\\auth\\logincomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\ui\\components\\auth\\logincomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices\\blazorapp2\\blazorapp2\\authsystems\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\authsystems\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices\\blazorapp2\\blazorapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices\\blazorapp2\\blazorapp2\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices\\blazorapp2\\blazorapp2\\layout\\navmenu.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\layout\\navmenu.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices\\blazorapp2\\blazorapp2\\authsystems\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\authsystems\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices\\blazorapp2\\blazorapp2\\authsystems\\infrastructure\\customhttpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\authsystems\\infrastructure\\customhttpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices\\blazorapp2\\blazorapp2\\authsystems\\infrastructure\\customauthstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\authsystems\\infrastructure\\customauthstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices\\blazorapp2\\blazorapp2\\authsystems\\infrastructure\\authenticationheaderhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\authsystems\\infrastructure\\authenticationheaderhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices\\blazorapp2\\blazorapp2\\authsystems\\services\\authorizingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\authsystems\\services\\authorizingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices\\blazorapp2\\blazorapp2\\authsystems\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\authsystems\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices\\blazorapp2\\blazorapp2\\authsystems\\services\\interfaces\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\authsystems\\services\\interfaces\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices\\blazorapp2\\blazorapp2\\authsystems\\services\\interfaces\\ilocalstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\authsystems\\services\\interfaces\\ilocalstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices\\blazorapp2\\blazorapp2\\authsystems\\services\\localstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\authsystems\\services\\localstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices\\blazorapp2\\blazorapp2\\authsystems\\services\\sessionstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\authsystems\\services\\sessionstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 14,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "BlazorApp2\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "BlazorApp2\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T21:34:35.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NavMenu.razor.cs",
+              "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\Layout\\NavMenu.razor.cs",
+              "RelativeDocumentMoniker": "BlazorApp2\\Layout\\NavMenu.razor.cs",
+              "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\Layout\\NavMenu.razor.cs",
+              "RelativeToolTip": "BlazorApp2\\Layout\\NavMenu.razor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T21:34:27.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Models\\LoginModel.cs",
+              "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Models\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Models\\LoginModel.cs",
+              "RelativeToolTip": "BlazorApp2\\AuthSystems\\Models\\LoginModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T21:14:32.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IJwtService.cs",
+              "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\Interfaces\\IJwtService.cs",
+              "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Services\\Interfaces\\IJwtService.cs",
+              "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\Interfaces\\IJwtService.cs",
+              "RelativeToolTip": "BlazorApp2\\AuthSystems\\Services\\Interfaces\\IJwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T20:55:24.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ILocalStorageService.cs",
+              "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\Interfaces\\ILocalStorageService.cs",
+              "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Services\\Interfaces\\ILocalStorageService.cs",
+              "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\Interfaces\\ILocalStorageService.cs",
+              "RelativeToolTip": "BlazorApp2\\AuthSystems\\Services\\Interfaces\\ILocalStorageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T20:55:20.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthorizingService.cs",
+              "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\AuthorizingService.cs",
+              "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Services\\AuthorizingService.cs",
+              "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\AuthorizingService.cs",
+              "RelativeToolTip": "BlazorApp2\\AuthSystems\\Services\\AuthorizingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T20:49:07.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Services\\JwtService.cs",
+              "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\JwtService.cs",
+              "RelativeToolTip": "BlazorApp2\\AuthSystems\\Services\\JwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T20:49:03.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LocalStorageService.cs",
+              "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\LocalStorageService.cs",
+              "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Services\\LocalStorageService.cs",
+              "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\LocalStorageService.cs",
+              "RelativeToolTip": "BlazorApp2\\AuthSystems\\Services\\LocalStorageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T20:49:02.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SessionStorageService.cs",
+              "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\SessionStorageService.cs",
+              "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Services\\SessionStorageService.cs",
+              "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\SessionStorageService.cs",
+              "RelativeToolTip": "BlazorApp2\\AuthSystems\\Services\\SessionStorageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T20:49:02.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CustomHttpClient.cs",
+              "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Infrastructure\\CustomHttpClient.cs",
+              "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Infrastructure\\CustomHttpClient.cs",
+              "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Infrastructure\\CustomHttpClient.cs",
+              "RelativeToolTip": "BlazorApp2\\AuthSystems\\Infrastructure\\CustomHttpClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T20:46:40.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CustomAuthStateProvider.cs",
+              "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Infrastructure\\CustomAuthStateProvider.cs",
+              "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Infrastructure\\CustomAuthStateProvider.cs",
+              "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Infrastructure\\CustomAuthStateProvider.cs",
+              "RelativeToolTip": "BlazorApp2\\AuthSystems\\Infrastructure\\CustomAuthStateProvider.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAwwGMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T20:33:55.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\Program.cs",
+              "RelativeDocumentMoniker": "BlazorApp2\\Program.cs",
+              "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\Program.cs",
+              "RelativeToolTip": "BlazorApp2\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAIwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T16:43:46.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\AuthService.cs",
+              "RelativeToolTip": "BlazorApp2\\AuthSystems\\Services\\AuthService.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAwwC4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T16:35:58.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthenticationHeaderHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Infrastructure\\AuthenticationHeaderHandler.cs",
+              "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Infrastructure\\AuthenticationHeaderHandler.cs",
+              "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\AuthSystems\\Infrastructure\\AuthenticationHeaderHandler.cs",
+              "RelativeToolTip": "BlazorApp2\\AuthSystems\\Infrastructure\\AuthenticationHeaderHandler.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA4wEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T16:35:43.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginComponent.razor.cs",
+              "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\UI\\Components\\Auth\\LoginComponent.razor.cs",
+              "RelativeDocumentMoniker": "BlazorApp2\\UI\\Components\\Auth\\LoginComponent.razor.cs",
+              "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\UI\\Components\\Auth\\LoginComponent.razor.cs",
+              "RelativeToolTip": "BlazorApp2\\UI\\Components\\Auth\\LoginComponent.razor.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAmwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T16:35:21.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginComponent.razor",
+              "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\UI\\Components\\Auth\\LoginComponent.razor",
+              "RelativeDocumentMoniker": "BlazorApp2\\UI\\Components\\Auth\\LoginComponent.razor",
+              "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices\\BlazorApp2\\BlazorApp2\\UI\\Components\\Auth\\LoginComponent.razor",
+              "RelativeToolTip": "BlazorApp2\\UI\\Components\\Auth\\LoginComponent.razor",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T16:35:07.162Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

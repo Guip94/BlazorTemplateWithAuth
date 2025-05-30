@@ -1,0 +1,53 @@
+
+
+
+networks:
+  db-shared-network:
+    driver: bridge
+  write-network:
+  read-network:
+  user-network:
+  microservices_default:
+    driver: bridge
+
+services:
+
+  ## DATABASES
+
+  sql-user:
+    container_name: sql-user
+    build: ./Sql/SqlUser
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=${Pwd}
+      - MSSQL_PID=DEVELOPER
+      - MSSQL_TCP_PORT=1433
+    ports:
+      - 11133:1433
+    networks:
+      - user-network
+
+  ## APIs
+
+  user-api:
+    container_name: user-api
+    build: ./Api/UserAPI
+    volumes:
+      - user-shared:/app/shared
+    networks:
+      - user-network
+    ports:
+      - 20080:80
+    depends_on:
+      - sql-user
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development  ##### à utiliser si on spécifie qu'on est en DVP, sinon commenter dans program.cs
+      - ASPNETCORE_URLS=http://+:80
+
+
+
+
+volumes:
+  shared:
+  user-shared:
+  sql-shared:
