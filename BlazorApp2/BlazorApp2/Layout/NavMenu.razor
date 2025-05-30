@@ -10,6 +10,12 @@
 
     <AuthorizeView>
         <Authorized>
+
+               <MudNavLink Href="/profile" Icon="@Icons.Material.Filled.Person" Match="NavLinkMatch.Prefix">Profile
+                   </MudNavLink>
+
+
+
             <MudNavLink OnClick="Logout" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Handshake" IconColor="Color.Primary">
                 <MudText> Logout </MudText>
             </MudNavLink>

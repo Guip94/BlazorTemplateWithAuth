@@ -3,6 +3,8 @@ using BlazorApp2.AuthSystems.Infrastructure;
 using BlazorApp2.AuthSystems.Infrastructure.Interfaces;
 using BlazorApp2.AuthSystems.Services;
 using BlazorApp2.AuthSystems.Services.Interfaces;
+using Domain.Repositories.UserAPI;
+using Domain.Services.UserAPI;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
@@ -59,12 +61,22 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 
 
+builder.Services.AddSingleton<ILoggerFactory, LoggerFactory>();
+
+
 
 //User API
 
+// AuthenticationState for Authorizing status in the header
+builder.Services.AddScoped<AuthorizingService>();
+
+
+// Repo + services 
+builder.Services.AddScoped<IAdressRepository, AdressService>();
+
 builder.Services.AddHttpClient<ICustomHttpClient, CustomHttpClient>("UserAPI", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:38080");
+    client.BaseAddress = new Uri("http://localhost:20080");
 
     client.DefaultRequestHeaders.Add("Accept", "application/json");
 }).AddHttpMessageHandler<AuthenticationHeaderHandler>();

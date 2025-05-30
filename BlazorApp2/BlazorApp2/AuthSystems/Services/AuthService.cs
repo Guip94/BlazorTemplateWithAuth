@@ -17,16 +17,17 @@ namespace BlazorApp2.AuthSystems.Services
         private readonly ILocalStorageService _localStorageService;
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly NavigationManager _navigationManager;
+        private readonly ISessionStorageService _sessionStorageService;
 
 
-
-        public AuthService(HttpClient httpClient, AuthenticationStateProvider authStateProvider, ILocalStorageService localStorageService, IHttpClientFactory httpClientFactory, NavigationManager navigationManager)
+        public AuthService(HttpClient httpClient, AuthenticationStateProvider authStateProvider, ILocalStorageService localStorageService, IHttpClientFactory httpClientFactory, NavigationManager navigationManager, ISessionStorageService sessionStorageService)
         {
             _httpClient = httpClient;
             _authStateProvider = authStateProvider;
             _localStorageService = localStorageService;
             _httpClientFactory = httpClientFactory;
             _navigationManager = navigationManager;
+            _sessionStorageService = sessionStorageService;
         }
 
         public async Task<AuthResult> Login(LoginModel loginModel)
@@ -52,6 +53,23 @@ namespace BlazorApp2.AuthSystems.Services
                     //await _localStorageService.SetItemAsync("Response", true);
                     await _localStorageService.SetItemAsync("authToken", rslt.AccessToken);
                     await _localStorageService.SetItemAsync("refreshToken", rslt.RefreshToken);
+
+                    //try
+                    //{
+
+                    //    AccessToken accessToken = new AccessToken
+                    //    {
+                    //        Value = rslt.AccessToken,
+                    //        Expires = DateTime.UtcNow.AddSeconds(60)
+                    //    };
+
+                    //    await _sessionStorageService.SetAccessTokenAsync(accessToken);
+                    //}
+                    //catch (Exception ex)
+                    //{
+                    //    Console.WriteLine($"Erreur : {ex.Message}");
+                    //}
+
 
                     ((CustomAuthStateProvider)_authStateProvider).NotifyUserAuthentication(rslt.AccessToken);
 

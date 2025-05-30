@@ -39,7 +39,6 @@ GO
             [Zipcode] INT NULL, 
             [City] NVARCHAR(50) NULL, 
             [Street] NVARCHAR(200) NULL, 
-
         )
         GO
 
