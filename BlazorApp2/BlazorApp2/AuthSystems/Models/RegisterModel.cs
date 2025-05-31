@@ -9,7 +9,7 @@ namespace BlazorApp2.AuthSystems.Models
 
         [Required]
         [DataType(DataType.Password)]
-        public  string Password { get; set; }
+        public  string Pwd { get; set; }
 
 
         [Required]
@@ -21,7 +21,7 @@ namespace BlazorApp2.AuthSystems.Models
         public RegisterModel(string mail,  string pwd, string lastname, string firstname)
         {
             Mail = mail;
-            Password = pwd;
+            Pwd = pwd;
             Lastname = lastname;
             Firstname = firstname;
         }

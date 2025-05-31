@@ -36,7 +36,7 @@ namespace BlazorApp2.UI.Components.Auth
         private bool isLoading = false;
 
         [DataType(DataType.Password)]
-        [Compare(nameof(registerModel.Password))]
+        [Compare(nameof(registerModel.Pwd))]
         private string confirmPassword { get; set; }
 
 

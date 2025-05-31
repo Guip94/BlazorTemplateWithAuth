@@ -7,6 +7,8 @@ using System.Net.Http.Json;
 using System.Net.Http;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using System.Xml;
+using Blazorise;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BlazorApp2.AuthSystems.Services
 {
@@ -110,23 +112,48 @@ namespace BlazorApp2.AuthSystems.Services
 
                 var response = await httpClient.PostAsJsonAsync("api/Auth/register", registerModel);
 
-
-
-                AuthResult rslt = await response.Content.ReadFromJsonAsync<AuthResult>();
+                AuthResult registerAuthResult;
+                AuthResult loginAuthResult;
 
                 if (response.IsSuccessStatusCode)
                 {
+                    try
+                    {
 
-                    // login
 
-                    return rslt;
+                      var loginRslt =  await Login(new LoginModel(registerModel.Mail, registerModel.Pwd));
+
+                        if (loginRslt.Success) 
+                        {
+                            return loginAuthResult = new AuthResult
+                            {
+                                Success = true,
+                                Message = "Inscription réussie"
+                            };
+
+                        }
+                     
+
+                    }
+                    catch (Exception ex)
+                    {
+                        return loginAuthResult = new AuthResult
+                        {
+                            Success = false,
+                            Message = "Echec de connexion",
+                            Errors = new[] { ex.Message }
+                        };
+
+
+                    }
                 }
-                return new AuthResult
+
+                return registerAuthResult = new AuthResult
                 {
-                    Success = false,
-                    Message = rslt?.Message ?? "Echec de l'inscription",
-                    Errors = rslt?.Errors ?? new[] { "Une erreur est apparue lors de l'inscription " }
+                    Success = true,
+                    Message = "Inscription réussie"
                 };
+
 
 
             }
