@@ -23,7 +23,7 @@ namespace Domain.Services.UserAPI
             {
                 JsonContent jsonContent = JsonContent.Create(command);
 
-                using (HttpResponseMessage response = await _httpClient.PostAsync("/api/user/Adress", jsonContent))
+                using (HttpResponseMessage response = await _httpClient.PostAsync("/api/Adress", jsonContent))
                 {
 
                     if (!response.IsSuccessStatusCode)
@@ -48,7 +48,7 @@ namespace Domain.Services.UserAPI
             try
             {
 
-                using (HttpResponseMessage response = await _httpClient.GetAsync($"api/user/Adress/{query.UserId}"))
+                using (HttpResponseMessage response = await _httpClient.GetAsync($"api/Adress/{query.UserId}"))
                 {
 
                     if ( !response.IsSuccessStatusCode)
@@ -85,7 +85,7 @@ namespace Domain.Services.UserAPI
             {
                 JsonContent jsonContent = JsonContent.Create(command);
 
-                using (HttpResponseMessage response = await _httpClient.PutAsync("/api/user/Adress", jsonContent))
+                using (HttpResponseMessage response = await _httpClient.PutAsync("/api/Adress", jsonContent))
                 {
                     if (!response.IsSuccessStatusCode)
                     {

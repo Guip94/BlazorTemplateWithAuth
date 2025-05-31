@@ -8,14 +8,19 @@
             <MudText Typo="Typo.h6">User Address</MudText>
         </MudCardHeader>
         <MudCardContent>
-            <MudText>Street: @UserAdress.Street</MudText>
+            <MudText>State: @UserAdress.Country</MudText>
             <MudText>City: @UserAdress.City</MudText>
-            <MudText>State: @UserAdress.Zipcode</MudText>
-            <MudText>Zip Code: @UserAdress.Country</MudText>
+            <MudText>Zip Code: @UserAdress.Zipcode</MudText>
+            <MudText>Street: @UserAdress.Street</MudText>
         </MudCardContent>
     </MudCard>
 }
 else
 {
     <MudText>No address information available.</MudText>
+
+
+    <MudCardContent>
+        <MudButton >Add adress</MudButton>
+    </MudCardContent>
 }
