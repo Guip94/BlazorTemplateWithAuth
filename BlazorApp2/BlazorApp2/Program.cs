@@ -11,8 +11,16 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using MudBlazor.Services;
 using System.Security.Claims;
+using System.Security.Cryptography.X509Certificates;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
+
+
+
+
+
+
+
 
 
 builder.Services.AddMudServices();
@@ -20,8 +28,6 @@ builder.Services.AddMudServices();
 
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
-
 
 
 
@@ -68,7 +74,7 @@ builder.Services.AddSingleton<ILoggerFactory, LoggerFactory>();
 //User API
 
 // AuthenticationState for Authorizing status in the header
-builder.Services.AddScoped<AuthorizingService>();
+builder.Services.AddScoped<IAuthorizingService,AuthorizingService>();
 
 
 // Repo + services 
@@ -76,7 +82,7 @@ builder.Services.AddScoped<IAdressRepository, AdressService>();
 
 builder.Services.AddHttpClient<ICustomHttpClient, CustomHttpClient>("UserAPI", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:20080");
+    client.BaseAddress = new Uri("https://localhost:20443");
 
     client.DefaultRequestHeaders.Add("Accept", "application/json");
 }).AddHttpMessageHandler<AuthenticationHeaderHandler>();

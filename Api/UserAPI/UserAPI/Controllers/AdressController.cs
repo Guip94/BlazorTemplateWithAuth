@@ -21,7 +21,7 @@ namespace UserAPI.Controllers
             _adressRepo = adressRepo;
         }
 
-        [Authorize]
+       
         [HttpPost]
         public IActionResult CreateAdress(AddAdressDTO adress)
         {
@@ -31,7 +31,7 @@ namespace UserAPI.Controllers
             return NoContent();
         }
 
-
+        
         [HttpPatch]
         [HttpPut]
         public IActionResult UpdateAdress( UpdateAdressDTO adress)
@@ -42,7 +42,7 @@ namespace UserAPI.Controllers
             return NoContent();
         }
 
-      
+       
         [HttpGet("{userId}")]
 
         //GetAdressByUserId

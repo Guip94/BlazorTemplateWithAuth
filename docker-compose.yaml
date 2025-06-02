@@ -34,16 +34,20 @@ services:
     build: ./Api/UserAPI
     volumes:
       - user-shared:/app/shared
+      - C:\Users\pinch\Certs_For_Dev:/app/certs:ro
     networks:
       - user-network
     ports:
       - 20080:80
+      - 20443:443
     depends_on:
       - sql-user
     environment:
       - ASPNETCORE_ENVIRONMENT=Development  ##### à utiliser si on spécifie qu'on est en DVP, sinon commenter dans program.cs
-      - ASPNETCORE_URLS=http://+:80
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - DOTNET_HTTPS_PORT=443
 
+    # entrypoint: ["sh", "-c", "ls -l /app/certs && sleep 3600"]
 
 
 

@@ -12,6 +12,7 @@ using System.Security.Claims;
 using ToolSecurity;
 using System.Text.Json;
 using UserAPI.Properties;
+using System.Security.Cryptography.X509Certificates;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -35,6 +36,43 @@ builder.Services.AddControllers();
 
 //File.WriteAllBytes("xxx.bin", cypher);
 //File.WriteAllBytes("xxx.bin", keys);
+
+
+
+
+
+#region : configuration Https
+
+//permettre la lecture du json.env  ==> ajout dans le SDK
+var configuration = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json.env", optional:false, reloadOnChange: true)
+    .Build();
+
+
+
+
+
+string CertificatePath = configuration["certificatePfx:certificatePath"]!;
+string Pwd = configuration["certificatePfx:certificatePassword"]!;
+
+
+
+
+X509Certificate2 certificate = new X509Certificate2(CertificatePath, Pwd);
+
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(80);
+    options.ListenAnyIP(443, listenOptions =>
+        {
+            listenOptions.UseHttps(certificate);
+        });
+});
+
+#endregion
+
+
+
 
 
 
@@ -177,16 +215,21 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
+
 }
 
-// app.UseHttpsRedirection();
+
+app.UseCors("dev");
+
+
+app.UseHttpsRedirection();
 
 app.UseAuthentication();
 
 
 app.UseAuthorization();
 
-app.UseCors("dev");
 app.MapControllers();
 
 app.Run();

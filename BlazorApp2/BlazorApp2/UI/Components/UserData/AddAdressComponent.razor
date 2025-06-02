@@ -1,5 +1,72 @@
-﻿<h3>AddAdressComponent</h3>
+﻿
 
-@code {
+@attribute [Authorize]
 
-}
+
+<MudCardContent>
+    <MudPaper Class="pa-4" Elevation="2">
+        <MudForm Model="_adress" @ref="_registerAdressForm">
+
+            <MudTextField T="string"
+                          @bind-Value="_adress.Country"
+                          Label="Country"
+                          Variant="Variant.Outlined"
+                          Margin="Margin.Dense"
+                          Required="true"
+                          RequiredError="Country is required"
+                          Adornment="Adornment.End"
+                          AdornmentIcon="@Icons.Material.Filled.LocationOn" />
+                          
+            <MudTextField T="string"
+                          @bind-Value="_adress.City"
+                          Label="City"
+                          Variant="Variant.Outlined"
+                          Margin="Margin.Dense"
+                          Required="true"
+                          RequiredError="City is required"
+                          Adornment="Adornment.End"
+                          AdornmentIcon="@Icons.Material.Filled.LocationOn" />
+            
+            <MudTextField T="int"
+                          @bind-Value="_adress.Zipcode"
+                          Label="Zipcode"
+                          Variant="Variant.Outlined"
+                          Margin="Margin.Dense"
+                          Required="true"
+                          RequiredError="Zipcode is required"
+                          Adornment="Adornment.End"
+                          AdornmentIcon="@Icons.Material.Filled.OtherHouses" />
+
+            <MudTextField T="string"
+                          @bind-Value="_adress.Street"
+                          Label="Street"
+                          Variant="Variant.Outlined"
+                          Margin="Margin.Dense"
+                          Required="true"
+                          RequiredError="Street is required"
+                          Adornment="Adornment.End"
+                          AdornmentIcon="@Icons.Material.Filled.Home" />
+
+            
+
+
+
+
+        </MudForm>
+
+        <MudContainer MaxWidth="MaxWidth.Large" Fixed="true">
+            <MudButton Color="Color.Primary" OnClick="HandleValidSubmit" Size="Size.Medium" EndIcon="@Icons.Material.Filled.Send">
+                Save Address
+            </MudButton>
+
+            <MudButton Color="Color.Secondary" OnClick="Cancel" Size="Size.Medium" EndIcon="@Icons.Material.Filled.ArrowBack">
+                Cancel
+            </MudButton>
+        </MudContainer>
+
+
+
+
+
+    </MudPaper>
+</MudCardContent>
