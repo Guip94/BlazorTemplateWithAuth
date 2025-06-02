@@ -47,14 +47,17 @@ namespace UserAPI.Infrastructure
            
             QueryResult<User> rslt = _userRepository.Execute(new GetUserRoleQuery(user.Id));
 
+
+
+
             var temp = rslt.Result.Role;
-            var audiences = _configuration.GetSection("Jwt:Audience").Get<string[]>(); 
+            //var audiences = _configuration.GetSection("Jwt:Audience").Get<string[]>(); 
             var token = new JwtSecurityToken
                  (
 
                  // Jwt renvoie au appsettings json
                  issuer: _configuration["Jwt:Issuer"],
-                 audience: audiences?.FirstOrDefault(),
+                 audience: _configuration["Jwt:Audience"],
                  claims:
                      [
                      new Claim (ClaimTypes.NameIdentifier, user.Id.ToString()),

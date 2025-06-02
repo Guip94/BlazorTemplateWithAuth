@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices2\\blazorapp2\\blazorapp2\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices2\\blazorapp2\\blazorapp2\\authsystems\\services\\authorizingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\authsystems\\services\\authorizingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices2\\blazorapp2\\blazorapp2\\authsystems\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\authsystems\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices2\\blazorapp2\\blazorapp2\\authsystems\\services\\interfaces\\iauthorizingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\authsystems\\services\\interfaces\\iauthorizingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices2\\blazorapp2\\blazorapp2\\layout\\navmenu.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\layout\\navmenu.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices2\\blazorapp2\\blazorapp2\\ui\\components\\userdata\\adresscomponent.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\ui\\components\\userdata\\adresscomponent.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices2\\blazorapp2\\blazorapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices2\\blazorapp2\\blazorapp2\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26462382-5048-40C8-945B-2CC51F65834C}|AppEntities\\Entities.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices2\\blazorapp2\\appentities\\queries\\userapiqueries\\adressqueries\\getadressquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,10 +83,6 @@
       "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices2\\blazorapp2\\blazorapp2\\authsystems\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\authsystems\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices2\\blazorapp2\\blazorapp2\\authsystems\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\authsystems\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -95,10 +107,6 @@
       "RelativeMoniker": "D:0:0:{842BE691-2A50-49C1-96F7-3800B4221528}|Domain\\Domain.csproj|solutionrelative:domain\\repositories\\userapi\\iadressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices2\\blazorapp2\\blazorapp2\\authsystems\\services\\authorizingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\authsystems\\services\\authorizingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{26462382-5048-40C8-945B-2CC51F65834C}|AppEntities\\Entities.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices2\\blazorapp2\\appentities\\commands\\userapicommands\\adresscommands\\updateadresscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26462382-5048-40C8-945B-2CC51F65834C}|AppEntities\\Entities.csproj|solutionrelative:appentities\\commands\\userapicommands\\adresscommands\\updateadresscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -109,10 +117,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices2\\blazorapp2\\blazorapp2\\ui\\components\\auth\\logincomponent.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\ui\\components\\auth\\logincomponent.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices2\\blazorapp2\\blazorapp2\\layout\\navmenu.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\layout\\navmenu.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{070C995A-ADBD-436D-9B9D-6649AC3BDDFD}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\pinch\\desktop\\technofutur\\archi_logi\\pff\\apis\\microservices2\\blazorapp2\\blazorapp2\\authsystems\\infrastructure\\customhttpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -150,7 +154,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -166,7 +170,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "IAuthorizingService.cs",
+              "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\Interfaces\\IAuthorizingService.cs",
+              "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Services\\Interfaces\\IAuthorizingService.cs",
+              "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\Interfaces\\IAuthorizingService.cs",
+              "RelativeToolTip": "BlazorApp2\\AuthSystems\\Services\\Interfaces\\IAuthorizingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T20:01:50.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "BlazorApp2\\Properties\\launchSettings.json",
@@ -179,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "LoginRegister.razor",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\Pages\\LoginRegister.razor",
               "RelativeDocumentMoniker": "BlazorApp2\\Pages\\LoginRegister.razor",
@@ -191,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "AddAdressComponent.razor.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\UI\\Components\\UserData\\AddAdressComponent.razor.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\UI\\Components\\UserData\\AddAdressComponent.razor.cs",
@@ -204,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "AddAdressComponent.razor",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\UI\\Components\\UserData\\AddAdressComponent.razor",
               "RelativeDocumentMoniker": "BlazorApp2\\UI\\Components\\UserData\\AddAdressComponent.razor",
@@ -217,20 +234,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "AdressComponent.razor.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\UI\\Components\\UserData\\AdressComponent.razor.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\UI\\Components\\UserData\\AdressComponent.razor.cs",
               "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\UI\\Components\\UserData\\AdressComponent.razor.cs",
               "RelativeToolTip": "BlazorApp2\\UI\\Components\\UserData\\AdressComponent.razor.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwEAAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAYwCgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T21:34:45.767Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "AdressComponent.razor",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\UI\\Components\\UserData\\AdressComponent.razor",
               "RelativeDocumentMoniker": "BlazorApp2\\UI\\Components\\UserData\\AdressComponent.razor",
@@ -243,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "BlazorApp2\\Layout\\MainLayout.razor",
@@ -255,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "AdressDTO.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\UI\\Components\\UserData\\Models\\AdressDTO.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\UI\\Components\\UserData\\Models\\AdressDTO.cs",
@@ -267,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "RegisterComponent.razor",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\UI\\Components\\Auth\\RegisterComponent.razor",
               "RelativeDocumentMoniker": "BlazorApp2\\UI\\Components\\Auth\\RegisterComponent.razor",
@@ -279,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "RegisterModel.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\AuthSystems\\Models\\RegisterModel.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Models\\RegisterModel.cs",
@@ -291,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "RegisterComponent.razor.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\UI\\Components\\Auth\\RegisterComponent.razor.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\UI\\Components\\Auth\\RegisterComponent.razor.cs",
@@ -303,7 +320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "UpdateAdressCommand.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\AppEntities\\Commands\\UserAPICommands\\AdressCommands\\UpdateAdressCommand.cs",
               "RelativeDocumentMoniker": "AppEntities\\Commands\\UserAPICommands\\AdressCommands\\UpdateAdressCommand.cs",
@@ -315,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "GetAdressQuery.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\AppEntities\\Queries\\UserAPIQueries\\AdressQueries\\GetAdressQuery.cs",
               "RelativeDocumentMoniker": "AppEntities\\Queries\\UserAPIQueries\\AdressQueries\\GetAdressQuery.cs",
@@ -327,7 +344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "Domain.csproj",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\Domain\\Domain.csproj",
               "RelativeDocumentMoniker": "Domain\\Domain.csproj",
@@ -339,7 +356,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "AdressService.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\Domain\\Services\\UserAPI\\AdressService.cs",
               "RelativeDocumentMoniker": "Domain\\Services\\UserAPI\\AdressService.cs",
@@ -351,7 +368,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "IAdressRepository.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\Domain\\Repositories\\UserAPI\\IAdressRepository.cs",
               "RelativeDocumentMoniker": "Domain\\Repositories\\UserAPI\\IAdressRepository.cs",
@@ -363,7 +380,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "AddAdressCommand.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\AppEntities\\Commands\\UserAPICommands\\AdressCommands\\AddAdressCommand.cs",
               "RelativeDocumentMoniker": "AppEntities\\Commands\\UserAPICommands\\AdressCommands\\AddAdressCommand.cs",
@@ -375,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "Adress.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\AppEntities\\Entities\\UserAPI\\Adress.cs",
               "RelativeDocumentMoniker": "AppEntities\\Entities\\UserAPI\\Adress.cs",
@@ -387,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "Profile.razor",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\Pages\\Profile.razor",
               "RelativeDocumentMoniker": "BlazorApp2\\Pages\\Profile.razor",
@@ -399,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "BlazorApp2\\Layout\\NavMenu.razor",
@@ -411,19 +428,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 4,
               "Title": "NavMenu.razor.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\Layout\\NavMenu.razor.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\Layout\\NavMenu.razor.cs",
               "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\Layout\\NavMenu.razor.cs",
               "RelativeToolTip": "BlazorApp2\\Layout\\NavMenu.razor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCoAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAcwCQAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T21:34:27.309Z"
+              "WhenOpened": "2025-05-29T21:34:27.309Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\AuthSystems\\Models\\LoginModel.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Models\\LoginModel.cs",
@@ -435,7 +453,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "IJwtService.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\Interfaces\\IJwtService.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Services\\Interfaces\\IJwtService.cs",
@@ -447,7 +465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "ILocalStorageService.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\Interfaces\\ILocalStorageService.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Services\\Interfaces\\ILocalStorageService.cs",
@@ -459,19 +477,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 1,
               "Title": "AuthorizingService.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\AuthorizingService.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Services\\AuthorizingService.cs",
               "ToolTip": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\AuthorizingService.cs",
               "RelativeToolTip": "BlazorApp2\\AuthSystems\\Services\\AuthorizingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBsAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwB0AAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T20:49:07.084Z"
+              "WhenOpened": "2025-05-29T20:49:07.084Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "JwtService.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\JwtService.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Services\\JwtService.cs",
@@ -483,7 +502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "LocalStorageService.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\LocalStorageService.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Services\\LocalStorageService.cs",
@@ -495,7 +514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "SessionStorageService.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\SessionStorageService.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Services\\SessionStorageService.cs",
@@ -507,7 +526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "CustomHttpClient.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\AuthSystems\\Infrastructure\\CustomHttpClient.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Infrastructure\\CustomHttpClient.cs",
@@ -519,7 +538,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "CustomAuthStateProvider.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\AuthSystems\\Infrastructure\\CustomAuthStateProvider.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Infrastructure\\CustomAuthStateProvider.cs",
@@ -531,7 +550,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\Program.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\Program.cs",
@@ -544,7 +563,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 2,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\AuthSystems\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Services\\AuthService.cs",
@@ -552,11 +571,12 @@
               "RelativeToolTip": "BlazorApp2\\AuthSystems\\Services\\AuthService.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAYwFQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T16:35:58.899Z"
+              "WhenOpened": "2025-05-29T16:35:58.899Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "AuthenticationHeaderHandler.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\AuthSystems\\Infrastructure\\AuthenticationHeaderHandler.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\AuthSystems\\Infrastructure\\AuthenticationHeaderHandler.cs",
@@ -568,7 +588,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "LoginComponent.razor.cs",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\UI\\Components\\Auth\\LoginComponent.razor.cs",
               "RelativeDocumentMoniker": "BlazorApp2\\UI\\Components\\Auth\\LoginComponent.razor.cs",
@@ -580,7 +600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "LoginComponent.razor",
               "DocumentMoniker": "C:\\Users\\pinch\\Desktop\\Technofutur\\Archi_Logi\\PFF\\APIs\\MicroServices2\\BlazorApp2\\BlazorApp2\\UI\\Components\\Auth\\LoginComponent.razor",
               "RelativeDocumentMoniker": "BlazorApp2\\UI\\Components\\Auth\\LoginComponent.razor",

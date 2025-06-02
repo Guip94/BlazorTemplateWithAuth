@@ -17,7 +17,8 @@ namespace BlazorApp2.Layout
 
         [Inject]
         private NavigationManager _navigation {  get; set; }
-
+        [Inject]
+        private IAuthorizingService _authorizingService { get; set; }
 
 
 
@@ -30,7 +31,13 @@ namespace BlazorApp2.Layout
                 if (state.User.Identity.IsAuthenticated)
                 {
              
-                        await _authService.Logout();
+
+                    //Make sure the user is considered as authenticated [Authorize] in the API
+
+                    await _authorizingService.GetCurrentAuthorization();
+
+
+                    await _authService.Logout();
 
 
                         _snackbar.Add("Log out succesfull");

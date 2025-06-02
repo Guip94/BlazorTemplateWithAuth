@@ -109,16 +109,21 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = true,
+            ValidIssuer = _config["Jwt:Issuer"],
+
+
             ValidateAudience = true,
+            ValidAudience = _config["Jwt:Audience"],
+
+
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-            ValidIssuer = _config["Jwt:Issuer"],
-            //ValidAudience = _config["Jwt:Audience"], ==> car plusieurs audiences donc impossible
-            AudienceValidator = (audiences, securityToken, validationParameters) =>
-            {
-                var validAudiences = _config.GetSection("Jwt:Audience").Get<string[]>();
-                return audiences.Intersect(validAudiences).Any();
-            },
+            // ValidAudience = _config["Jwt:Audience"], ==> car plusieurs audiences donc impossible
+            //AudienceValidator = (audiences, securityToken, validationParameters) =>
+            //{
+            //    var validAudiences = _config.GetSection("Jwt:Audience").Get<string[]>();
+            //    return audiences.Intersect(validAudiences).Any();
+            //},
 
 
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.Default.GetBytes(rsaServiceSK.DecryptAsString(Resource.skData)))
@@ -225,10 +230,11 @@ app.UseCors("dev");
 
 app.UseHttpsRedirection();
 
+
 app.UseAuthentication();
 
-
 app.UseAuthorization();
+
 
 app.MapControllers();
 

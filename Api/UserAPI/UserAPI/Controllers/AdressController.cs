@@ -21,20 +21,20 @@ namespace UserAPI.Controllers
             _adressRepo = adressRepo;
         }
 
-       
+        [Authorize]
         [HttpPost]
         public IActionResult CreateAdress(AddAdressDTO adress)
         {
             CommandResult rslt = _adressRepo.Execute(new AddAdressCommand(adress.Country, adress.Zipcode, adress.City, adress.Street, adress.UserId));
-            if (rslt.IsFailure) {  return BadRequest(rslt.ErrorMessage); }
+            if (rslt.IsFailure) { return BadRequest(rslt.ErrorMessage); }
 
             return NoContent();
         }
 
-        
+        [Authorize]
         [HttpPatch]
         [HttpPut]
-        public IActionResult UpdateAdress( UpdateAdressDTO adress)
+        public IActionResult UpdateAdress(UpdateAdressDTO adress)
         {
             CommandResult rslt = _adressRepo.Execute(new UpdateAdressCommand(adress.Country, adress.Zipcode, adress.City, adress.Street, adress.UserId));
             if (rslt.IsFailure) { return BadRequest(rslt.ErrorMessage); }
@@ -42,7 +42,8 @@ namespace UserAPI.Controllers
             return NoContent();
         }
 
-       
+
+        [Authorize]
         [HttpGet("{userId}")]
 
         //GetAdressByUserId
