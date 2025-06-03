@@ -17,5 +17,13 @@ namespace BlazorApp2.UI.Components.UserData.Models
         [Required(ErrorMessage = "Mail is required")]
         [DataType(DataType.EmailAddress)]
         public string Mail { get; set; }
+
+
+
+
+
+
+
+    
     }
 }

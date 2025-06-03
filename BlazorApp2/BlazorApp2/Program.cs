@@ -79,6 +79,7 @@ builder.Services.AddScoped<IAuthorizingService,AuthorizingService>();
 
 // Repo + services 
 builder.Services.AddScoped<IAdressRepository, AdressService>();
+builder.Services.AddScoped<IUserRepository, UserService>();
 
 builder.Services.AddHttpClient<ICustomHttpClient, CustomHttpClient>("UserAPI", client =>
 {

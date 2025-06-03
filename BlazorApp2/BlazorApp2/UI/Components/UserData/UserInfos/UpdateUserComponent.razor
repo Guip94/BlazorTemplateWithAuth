@@ -1,0 +1,68 @@
+﻿
+
+
+@if(_renderUpdateUserLastnameField || _renderUpdateUserFirstnameField || _renderUpdateUserMailField)
+{
+    <MudCard Class="px-4">
+        <MudForm>
+
+
+
+            <MudCardContent>
+               
+
+                @if (_renderUpdateUserLastnameField)
+                {
+                   <MudGrid>
+                       <MudItem>
+                            <MudTextField T="string" @bind-Value="_user.LastName" Label="Lastname" Variant="Variant.Outlined" Margin="Margin.Dense" Required="true" />
+                       </MudItem>
+                       <MudButtonGroup>
+                           <MudButton Color="Color.Primary" OnClick="() =>  OnSubmit((_user) => _user.LastName)" Size="Size.Medium" Variant="Variant.Filled">
+                                 Update 
+                            </MudButton>
+                            <MudButton Color="Color.Secondary" OnClick="() => OnCancel()" Size="Size.Medium" Variant="Variant.Filled">
+                                 Cancel
+                            </MudButton>
+                       </MudButtonGroup>
+                   </MudGrid>
+                  
+                }
+
+                @if (_renderUpdateUserFirstnameField)
+                {
+                    <MudTextField T="string" @bind-Value="_user.FirstName" Label="Firstname" Variant="Variant.Outlined" Margin="Margin.Dense" Required="true" />
+                }
+
+             @*     @if (_renderUpdateUserMailField)
+                 {
+                     <MudTextField T="string" @bind-Value="_user.Mail" Label="Mail" Variant="Variant.Outlined" Margin="Margin.Dense" Required="true" />
+                 } *@
+            </MudCardContent>
+
+          
+        </MudForm>
+     </MudCard>
+
+    @if (_renderUpdateUserLastnameField)
+    {
+    
+    
+
+    }
+
+
+    @if(_renderUpdateUserFirstnameField)
+    {
+    
+    }
+
+
+
+    @if (_renderUpdateUserMailField)
+    {
+    
+    }
+
+
+}

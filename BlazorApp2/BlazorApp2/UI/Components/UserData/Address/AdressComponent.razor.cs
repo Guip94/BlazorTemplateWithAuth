@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Components.Authorization;
 using MudBlazor;
 using System.Security.Claims;
 
-namespace BlazorApp2.UI.Components.UserData
+namespace BlazorApp2.UI.Components.UserData.Address
 {
     public partial class AdressComponent
     {

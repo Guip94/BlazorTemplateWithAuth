@@ -2,4 +2,12 @@
  @attribute [Authorize]
 
 
-<BlazorApp2.UI.Components.UserData.Address.AdressComponent />
+
+ <MudGrid>
+     <MudItem xs="12" sm="6">
+   <BlazorApp2.UI.Components.UserData.UserInfos.UserComponent/>
+     </MudItem>
+     <MudItem xs="12" sm="6">
+         <BlazorApp2.UI.Components.UserData.Address.AdressComponent/>
+     </MudItem>
+ </MudGrid>

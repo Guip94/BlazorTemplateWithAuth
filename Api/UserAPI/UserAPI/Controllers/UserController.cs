@@ -25,7 +25,7 @@ namespace UserAPI.Controllers
         }
 
         [Authorize(Policy = "adminaccess")]
-        [HttpGet("{id}")]
+        [HttpGet("role/{id}")]
         public IActionResult GetRole(int id)
         {
             try
@@ -39,8 +39,8 @@ namespace UserAPI.Controllers
 
         }
 
-        [Authorize]
 
+        [Authorize]
         [HttpPatch("{id}")]
         [HttpPut("{id}")]
         public IActionResult UpdateMail(int id,UpdateUserDTO user)

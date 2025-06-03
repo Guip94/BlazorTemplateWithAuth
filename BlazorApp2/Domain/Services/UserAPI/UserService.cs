@@ -49,7 +49,7 @@ namespace Domain.Services.UserAPI
             try
             {
                 JsonContent content = JsonContent.Create(command);
-                using (HttpResponseMessage response = await _httpClient.PutAsync($"api/user/updatelastname/{command.Id}", content))
+                using (HttpResponseMessage response = await _httpClient.PutAsync($"api/User/updatelastname/{command.Id}", content))
                 {
 
                     if (!response.IsSuccessStatusCode)
@@ -70,7 +70,7 @@ namespace Domain.Services.UserAPI
         {
             try
             {
-                using (HttpResponseMessage response = await _httpClient.GetAsync($"api/user/userinfos/{query}"))
+                using (HttpResponseMessage response = await _httpClient.GetAsync($"api/User/userinfos/{query.Id}"))
                 {
                     if (!response.IsSuccessStatusCode)
                     {
