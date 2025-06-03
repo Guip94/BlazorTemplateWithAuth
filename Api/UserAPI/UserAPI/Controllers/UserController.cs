@@ -64,5 +64,38 @@ namespace UserAPI.Controllers
             catch (Exception ex) { return BadRequest(ex.Message); }
 
         }
+
+    [HttpPatch("updatefirstname/{id}")]
+    [HttpPut("updatefirstname/{id}")]
+    public IActionResult UpdateUserFirstname(int id, UpdateUserDTO user)
+    {
+            try
+            {
+                CommandResult rslt = _userRepo.Execute(new UpdateUserFirstname(id, user.Firstname));
+
+                if (rslt.IsFailure) { return BadRequest(); }
+                return NoContent();
+
+            }
+            catch (Exception ex) { return BadRequest(ex.Message); }
+        }
+
+        [HttpPatch("updatelastname/{id}")]
+        [HttpPut("updatelastname/{id}")]
+        public IActionResult UpdateUserLastname(int id, UpdateUserDTO user)
+        {
+            try
+            {
+                CommandResult rslt = _userRepo.Execute(new UpdateUserFirstname(id, user.Lastname));
+
+                if (rslt.IsFailure) { return BadRequest(); }
+                return NoContent();
+
+            }
+            catch (Exception ex) { return BadRequest(ex.Message); }
+        }
+
+
     }
+
 }

@@ -227,6 +227,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors("dev");
 
+app.UseRouting();
 
 app.UseHttpsRedirection();
 

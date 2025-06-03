@@ -153,6 +153,34 @@ namespace Domain.Service
             catch (Exception ex) { return QueryResult<User>.Failure(ex.Message, ex); }
         }
 
-     
+        public CommandResult Execute(UpdateUserFirstname command)
+        {
+            try
+            {
+                int rslt = _connection.ExecuteNonQuery("[DbUserStandard].[UpdateUserFirstname]", true, command);
+                if (rslt is not 1) { CommandResult.Failure(" Update command faikure"); }
+
+                return CommandResult.Success();
+
+            }
+            catch (Exception ex)
+            {
+                return CommandResult.Failure(ex.Message, ex);
+            }
+        }
+
+        public CommandResult Execute(UpdateUserLastname command)
+        {
+            try
+            {
+                int rslt = _connection.ExecuteNonQuery("[DbUserStandard].[UpdateUserLastname]", true, command);
+                if (rslt is not 1) { return CommandResult.Failure("Update command failure"); }
+                return CommandResult.Success();
+            }
+            catch (Exception ex)
+            {
+                return CommandResult.Failure(ex.Message, ex);
+            }
+        }
     }
 }

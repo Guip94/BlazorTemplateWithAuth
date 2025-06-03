@@ -60,7 +60,7 @@ namespace UserAPI.Infrastructure
                  audience: _configuration["Jwt:Audience"],
                  claims:
                      [
-                     new Claim (ClaimTypes.NameIdentifier, user.Id.ToString()),
+                    new Claim (ClaimTypes.NameIdentifier, user.Id.ToString()),
                     new Claim (ClaimTypes.Name, user.Lastname),
                     new Claim ("Firstname", user.Firstname),
                     new Claim ("Mail", user.Mail),

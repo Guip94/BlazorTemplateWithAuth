@@ -1,0 +1,90 @@
+﻿
+
+
+
+
+
+
+<MudCardContent>
+    <MudPaper Class="p-xl-4">
+
+
+        <MudForm @bind-Value="_updateAdressForm" Model="_adress"> 
+
+            <MudTextField T="string"
+                           @bind-Value="_adress.Country"
+                           Label="Country"
+                           Variant="Variant.Outlined"
+                           Margin="Margin.Dense"
+                           Required="true"
+                           RequiredError="Country is required"
+                           Adornment="Adornment.End"
+                           AdornmentIcon="@Icons.Material.Filled.LocationOn" 
+                           
+                           />
+
+            <MudTextField T="string"
+                              @bind-Value="_adress.City"
+                            Label="City"
+                            Variant="Variant.Outlined"
+                            Margin="Margin.Dense"
+                            Required="true"
+                            RequiredError="City is required"
+                            Adornment="Adornment.End"
+                            AdornmentIcon="@Icons.Material.Filled.LocationOn" 
+                            
+                            />
+
+            <MudTextField T="int"
+                @bind-Value="_adress.Zipcode"
+                            Label="Zipcode"
+                            Variant="Variant.Outlined"
+                            Margin="Margin.Dense"
+                            Required="true"
+                            RequiredError="Zipcode is required"
+                            Adornment="Adornment.End"
+                            AdornmentIcon="@Icons.Material.Filled.OtherHouses"
+                            
+                            />
+                
+
+
+                <MudTextField T="string" 
+                    @bind-Value="_adress.Street"
+                            Label="Street"
+                            Variant="Variant.Outlined"
+                            Margin="Margin.Dense"
+                            Required="true"
+                            RequiredError="Street is required"
+                            Adornment="Adornment.End"
+                            AdornmentIcon="@Icons.Material.Filled.Home"
+
+                            />
+            
+
+
+
+
+
+
+
+
+        </MudForm>
+
+
+        <MudContainer>
+            <MudButton Color="Color.Primary" OnClick="OnSubmit" Size="Size.Medium" EndIcon="@Icons.Material.Filled.Update">
+                Update Address
+            </MudButton>
+
+            <MudButton Color="Color.Secondary" OnClick="OnCancel" Size="Size.Medium" EndIcon="@Icons.Material.Filled.ArrowBack">
+                Cancel
+            </MudButton>
+
+        </MudContainer>
+
+
+
+
+    </MudPaper>
+</MudCardContent>

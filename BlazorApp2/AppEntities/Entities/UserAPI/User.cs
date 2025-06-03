@@ -10,12 +10,12 @@ namespace Entities.Entities.UserAPI
     public class User
     {
         [JsonConstructor]
-        internal User(string mail, string lastname, string firstname, int adressId)
+        internal User(int id, string mail, string lastname, string firstname)
         {
+            Id = id;
             Mail = mail;
             Lastname = lastname;
             Firstname = firstname;
-            AdressId = adressId;
         }
 
         public int Id { get; }

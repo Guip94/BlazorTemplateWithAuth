@@ -1,0 +1,56 @@
+﻿
+<MudCardContent>
+
+
+    @if (renderUpdateAddressComponent)
+    {
+        <BlazorApp2.UI.Components.UserData.Address.UpdateAddressComponent OnCancelOrUpdateEventTriggered="ShowUpdateComponent" />
+
+    }
+    else
+    {
+        
+        @if (_Adress is not null)
+        {
+
+            <MudPaper>
+
+                <MudText Typo="Typo.h6">Address</MudText>
+                <MudTextField @bind-Value="@_Adress.Country" Label="Country" Variant="Variant.Outlined" Margin="Margin.Dense" />
+                <MudTextField @bind-Value="@_Adress.City" Label="City" Variant="Variant.Outlined" Margin="Margin.Dense" />
+                <MudTextField @bind-Value="@_Adress.Zipcode" Label="ZipCode" Variant="Variant.Outlined" Margin="Margin.Dense" />
+                <MudTextField @bind-Value="@_Adress.Street" Label="Street" Variant="Variant.Outlined" Margin="Margin.Dense" />
+
+                <MudButton OnClick="ShowUpdateComponent" Color="Color.Primary" EndIcon="@Icons.Material.Filled.Update">
+
+                    Update address
+                    
+                </MudButton>
+
+            </MudPaper>
+
+        }
+
+        else
+        {
+            <MudPaper>
+
+                <MudText Typo="Typo.h6">No Address registered</MudText>
+
+                <MudButton OnClick="RenderAddAddressComponent" Color="Color.Primary" EndIcon="@Icons.Material.Filled.House">
+                    Add Address
+                </MudButton>
+
+                @if (renderAddAddressComponent is true)
+                {
+                    <BlazorApp2.UI.Components.UserData.Address.AddAdressComponent OnCancel="RenderAddAddressComponent" />
+                }
+
+
+            </MudPaper>
+        }
+    }
+
+   
+
+</MudCardContent>

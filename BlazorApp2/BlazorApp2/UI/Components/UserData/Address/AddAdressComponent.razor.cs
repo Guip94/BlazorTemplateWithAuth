@@ -35,6 +35,11 @@ namespace BlazorApp2.UI.Components.UserData
         private AdressDTO _adress = new();
 
 
+        
+
+        [Parameter]
+        public EventCallback<bool> OnCancel { get; set; }
+
 
 
         protected override async Task OnInitializedAsync()
@@ -43,14 +48,6 @@ namespace BlazorApp2.UI.Components.UserData
 
             var isAuthenticateduser = await _authenticationStateProvider.GetAuthenticationStateAsync();
 
-            if (isAuthenticateduser.User.Identity.IsAuthenticated)
-            {
-
-
-
-
-
-            }
 
         }
 
@@ -86,7 +83,9 @@ namespace BlazorApp2.UI.Components.UserData
                             }
                             else
                             {
+                                StateHasChanged();
                                 _snackbar.Add("Address added successfully");
+                                _navigationManager.NavigateTo("/profile");
                             }
                         }
                         catch (Exception ex)
@@ -113,10 +112,14 @@ namespace BlazorApp2.UI.Components.UserData
 
         }
 
-        private void Cancel()
+        private async Task Cancel()
         {
+       
+
+            await OnCancel.InvokeAsync(true);
+
             _navigationManager.NavigateTo("/profile");
-            _snackbar.Add("No address added");
+            
         }
     }
 }

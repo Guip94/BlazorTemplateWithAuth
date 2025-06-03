@@ -58,8 +58,7 @@ namespace Domain.Mappers
                 (
                     (string)reader["Mail"],
                     (string)reader["Lastname"],
-                    (string)reader["Firstname"],
-                     reader["AdressId"] is DBNull ? null : (int)reader["AdressId"]
+                    (string)reader["Firstname"]
                 );
         }
      

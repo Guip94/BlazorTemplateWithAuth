@@ -51,13 +51,12 @@ namespace Domain.Entity
             AdressId = adressid;
         }
 
-        internal User(string mail, string lastname, string firstname, int? adressid)
+        internal User(string mail, string lastname, string firstname)
         {
             
             Mail = mail;
             Lastname = lastname;
             Firstname = firstname;
-            AdressId = adressid;
 
         }
 

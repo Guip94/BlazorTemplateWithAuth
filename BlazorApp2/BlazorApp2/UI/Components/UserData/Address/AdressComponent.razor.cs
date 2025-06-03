@@ -31,11 +31,20 @@ namespace BlazorApp2.UI.Components.UserData
         private NavigationManager _navigationManager { get; set; }
 
         [Parameter]
-        public AdressDTO Adress { get; set; }
+        public AdressDTO _Adress { get; set; }
 
 
 
-        private bool renderAddAddressComponent = false;
+
+        // allow to render the AddAdressComponent through the RenderAddAddressComponent method
+        //the event is triggered through the child component
+        private bool renderAddAddressComponent { get; set; } = false;
+
+
+
+        // allow to render the UpdateAddressComponent through the ShowUpdateComponent method
+        // the event is triggered from the child component
+        private bool renderUpdateAddressComponent { get; set; } = false;
 
         protected override async Task OnInitializedAsync()
         {
@@ -52,7 +61,7 @@ namespace BlazorApp2.UI.Components.UserData
                 if (result.IsSuccess)
                 {
 
-                    Adress = new AdressDTO
+                    _Adress = new AdressDTO
                     {
                         Country = result.Result.Country,
                         City = result.Result.City,
@@ -68,8 +77,17 @@ namespace BlazorApp2.UI.Components.UserData
 
         private void RenderAddAddressComponent()
         {
-
+           
             renderAddAddressComponent = !renderAddAddressComponent;
+
+            StateHasChanged();
+        }
+
+
+        private void ShowUpdateComponent()
+        {
+            renderUpdateAddressComponent = !renderUpdateAddressComponent;
+
             StateHasChanged();
         }
 

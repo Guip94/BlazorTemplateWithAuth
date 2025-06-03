@@ -388,7 +388,7 @@ GO
         AS
 
         BEGIN
-            SELECT Mail, Lastname, Firstname, AdressId FROM [DbUserStandard].[User] WHERE Id=@id
+            SELECT Mail, Lastname, Firstname FROM [DbUserStandard].[User] WHERE Id=@id
         END
         GO
     --#endregion
@@ -418,25 +418,6 @@ GO
         GO
 
     --#endregion
-    --#region : GetUserInfosById
-        CREATE PROCEDURE [DbUserStandard].[GetUserInfosById]
-            @id INT
-        AS
-
-        BEGIN
-
-            SELECT u.Mail, u.Lastname, u.Firstname, a.Country, a.Zipcode, a.City, a.Street FROM [DbUserStandard].[User] as u
-            JOIN [DbUserStandard].[Adress] as a ON u.AdressId = a.Id
-            WHERE u.Id=@id
-
-
-
-        END
-        GO
-
-
-
-    --#endregion
     --#region : GetUserRole
         CREATE PROCEDURE [DbUserStandard].[GetUserRole]
             @id int
@@ -461,18 +442,17 @@ GO
     --#region : UpdateUserMail
         CREATE PROCEDURE [DbUserStandard].[UpdateUserMail]
             @pwd NVARCHAR(60),
-            @mail NVARCHAR(384)
+            @mail NVARCHAR(384),
+            @id INT
         AS
-            @id INT,
-            @pwd NVARCHAR(60),
-            @mail NVARCHAR(384)
+            
         BEGIN
 
 
             BEGIN TRY
                 IF LEN(TRIM(@mail)) = 0
                     BEGIN
-                        RAISERROR(N'Invalid format for @mail',17,1)
+                        RAISERROR(N'Invalid format for mail',17,1)
                         RETURN;
                     END
 
@@ -482,7 +462,7 @@ GO
                         RETURN;
                     END
 
-                UPDATE [User] SET Mail=@mail WHERE Pwd=[HashPwd](@pwd) AND Id=@id
+                UPDATE [DbUserStandard].[User] SET Mail=@mail WHERE Pwd=[DbUserStandard].[HashPwd](@pwd) AND Id=@id
 
             END TRY
 
@@ -500,6 +480,96 @@ GO
 
         END
         GO
+
+    --#endregion
+    --#region : UpdateUserFirstname
+
+      CREATE PROCEDURE [DbUserStandard].[UpdateUserFirstname]
+           @userId INT,
+           @firstname NVARCHAR (30)
+        AS
+          
+        BEGIN
+
+
+            BEGIN TRY
+                IF LEN(TRIM(@firstname)) < 0
+                    BEGIN
+                        RAISERROR(N'Invalid format for firstname',17,1)
+                        RETURN;
+                    END
+
+                
+                UPDATE [DbUserStandard].[User]
+                SET Firstname=@firstname
+                WHERE Id=@userId
+
+              
+            END TRY
+
+            BEGIN CATCH
+
+                DECLARE @ErrorMessage NVARCHAR(4000) = ERROR_MESSAGE();
+                DECLARE @ErrorSeverity INT = ERROR_SEVERITY();
+                DECLARE @ErrorState INT = ERROR_STATE();
+
+
+                RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState)
+
+            END CATCH
+
+
+        END
+        GO
+
+
+    --#endregion
+    --#region : UpdateUserLastname
+
+
+    CREATE PROCEDURE [DbUserStandard].[UpdateUserLastname]
+    @userId INT,
+    @lastname NVARCHAR(30)
+
+    AS
+
+    BEGIN
+        BEGIN TRY
+
+        if(LEN(@lastname)< 1)
+        BEGIN
+            RAISERROR(N'Lastname too short', 17,1)
+            RETURN;
+        END
+
+        UPDATE [DbUserStandard].[User] 
+        SET Lastname=@lastname 
+        WHERE Id=@userId
+
+
+        END TRY
+
+
+        
+            BEGIN CATCH
+
+                DECLARE @ErrorMessage NVARCHAR(4000) = ERROR_MESSAGE();
+                DECLARE @ErrorSeverity INT = ERROR_SEVERITY();
+                DECLARE @ErrorState INT = ERROR_STATE();
+
+
+                RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState)
+
+            END CATCH
+
+
+
+    END
+
+
+    GO
+
+
 
     --#endregion
 
