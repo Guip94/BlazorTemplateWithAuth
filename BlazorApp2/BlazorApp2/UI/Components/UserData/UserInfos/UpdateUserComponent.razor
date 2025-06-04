@@ -1,68 +1,75 @@
 ﻿
 
 
-@if(_renderUpdateUserLastnameField || _renderUpdateUserFirstnameField || _renderUpdateUserMailField)
+
+
+@* Rendering lastname field to update*@
+@if (_editing == nameof(UserDTO_.Lastname))
 {
-    <MudCard Class="px-4">
-        <MudForm>
 
+            <MudForm>
+                <MudCardContent>
+                    <MudGrid>
 
-
-            <MudCardContent>
-               
-
-                @if (_renderUpdateUserLastnameField)
-                {
-                   <MudGrid>
-                       <MudItem>
-                            <MudTextField T="string" @bind-Value="_user.LastName" Label="Lastname" Variant="Variant.Outlined" Margin="Margin.Dense" Required="true" />
-                       </MudItem>
-                       <MudButtonGroup>
-                           <MudButton Color="Color.Primary" OnClick="() =>  OnSubmit((_user) => _user.LastName)" Size="Size.Medium" Variant="Variant.Filled">
-                                 Update 
+                        <MudItem xs="8">
+                    <MudTextField T="string" @bind-Value="UserDTO_.Lastname" Label="Lastname" Variant="Variant.Outlined" Margin="Margin.Dense" Required="true" />
+                        </MudItem>
+                   
+                        <MudItem xs="2">
+                            <MudButton>
+                                <MudIconButton Icon="@Icons.Material.Filled.Person" Color="Color.Primary" OnClick="() => OnSubmit((_user) => _user.Lastname)" Size="Size.Small" Variant="Variant.Filled"/>
                             </MudButton>
-                            <MudButton Color="Color.Secondary" OnClick="() => OnCancel()" Size="Size.Medium" Variant="Variant.Filled">
-                                 Cancel
+
+                        </MudItem>
+
+                        <MudItem xs="2">
+                            <MudButton>
+                                <MudIconButton Icon="@Icons.Material.Filled.Close" Color="Color.Secondary" OnClick="() => OnCancel()" Size="Size.Small" Variant="Variant.Filled" />
                             </MudButton>
-                       </MudButtonGroup>
-                   </MudGrid>
-                  
-                }
-
-                @if (_renderUpdateUserFirstnameField)
-                {
-                    <MudTextField T="string" @bind-Value="_user.FirstName" Label="Firstname" Variant="Variant.Outlined" Margin="Margin.Dense" Required="true" />
-                }
-
-             @*     @if (_renderUpdateUserMailField)
-                 {
-                     <MudTextField T="string" @bind-Value="_user.Mail" Label="Mail" Variant="Variant.Outlined" Margin="Margin.Dense" Required="true" />
-                 } *@
-            </MudCardContent>
-
-          
-        </MudForm>
-     </MudCard>
-
-    @if (_renderUpdateUserLastnameField)
-    {
-    
-    
-
-    }
-
-
-    @if(_renderUpdateUserFirstnameField)
-    {
-    
-    }
-
-
-
-    @if (_renderUpdateUserMailField)
-    {
-    
-    }
-
-
+                        </MudItem>
+                   
+                    </MudGrid>
+                </MudCardContent>
+            </MudForm>
 }
+    
+
+@*Rendering firstname field for update*@
+@if (_editing == nameof(UserDTO_.Firstname))
+{
+        <MudForm>
+            <MudCardContent>
+                <MudGrid>
+
+                    <MudItem xs="8">
+                    <MudTextField T="string" @bind-Value="UserDTO_.Firstname" Label="Firstname" Variant="Variant.Outlined" Margin="Margin.Dense" Required="true" />
+                    </MudItem>
+
+                    <MudItem xs="2">
+                        <MudButton>
+                            <MudIconButton
+                                 Icon="@Icons.Material.Filled.Person" Color="Color.Primary" OnClick="() => OnSubmit((_user) => _user.Firstname)" Size="Size.Small" Variant="Variant.Filled"/>
+                        </MudButton>
+                    </MudItem>
+
+                    <MudItem xs="2">
+                        <MudButton>
+                        <MudIconButton Icon="@Icons.Material.Filled.Close" Color="Color.Secondary" OnClick="() => OnCancel()" Size="Size.Small" Variant="Variant.Filled" />
+                        </MudButton>
+                    </MudItem>
+
+                </MudGrid>
+            </MudCardContent>
+        </MudForm>
+}
+
+
+
+@*Render Mail field for update   => this will require a specific validation with password*@
+@* @if (_renderUpdateUserMailField)
+     {
+
+     } *@
+
+
+

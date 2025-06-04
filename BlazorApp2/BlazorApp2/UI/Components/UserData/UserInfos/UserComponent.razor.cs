@@ -33,30 +33,10 @@ namespace BlazorApp2.UI.Components.UserData.UserInfos
         private UserDTO _user { get; set; }
 
 
+        private string? _editing { get; set; }
 
+      
 
-
-
-
-        // bool variable to control the rendering of the UpdateUserComponent
-
-
-        /// <summary>
-        /// var to render the lastname update component
-        /// </summary>
-        private bool _renderUpdateUserLastnameComponent { get; set; } = false;
-
-
-        /// <summary>
-        /// var to render the firstname update component
-        /// </summary>
-        private bool _renderUpdateUserFirstnameComponent { get; set; } = false;
-
-
-        /// <summary>
-        /// var to render the mail update component
-        /// </summary>
-        private bool _renderUpdateUserMailComponent { get; set; } = false;
 
 
         protected override async Task OnInitializedAsync()
@@ -86,8 +66,8 @@ namespace BlazorApp2.UI.Components.UserData.UserInfos
                         {
                             _user = new UserDTO
                             {
-                                FirstName = result.Result.Firstname,
-                                LastName = result.Result.Lastname,
+                                Firstname = result.Result.Firstname,
+                                Lastname = result.Result.Lastname,
                                 Mail = result.Result.Mail
 
                             };
@@ -111,28 +91,31 @@ namespace BlazorApp2.UI.Components.UserData.UserInfos
                 _snackbar.Add($"An error occurred while initializing the user component: {ex.Message}", Severity.Error);
             }
 
+
+
         }
 
 
 
-        private void RenderUpdateUserFirstnameComponent()
+
+        private void Editing(string propertyName)
         {
-            _renderUpdateUserFirstnameComponent = !_renderUpdateUserFirstnameComponent;
-            StateHasChanged();
+            _editing = propertyName;
         }
 
 
-        private void RenderUpdateUserLastnameComponent()
+        private void OnEventDone()
         {
-            _renderUpdateUserLastnameComponent = !_renderUpdateUserLastnameComponent;
-            StateHasChanged();
+
+            _editing = string.Empty;
         }
-
-
-        private void RenderUpdateUserMailComponent()
+        RenderFragment RenderFragmentField(string field) => builder =>
         {
-            _renderUpdateUserMailComponent = !_renderUpdateUserMailComponent;
-            StateHasChanged();
-        }
+            builder.OpenComponent(0, typeof(UpdateUserComponent));
+            builder.AddAttribute(1, "FieldName", field);
+            builder.AddAttribute(2, "UserDTO_", _user);
+            builder.AddAttribute(3, "OnCancelOrUpdateEventTriggered", EventCallback.Factory.Create(this, OnEventDone));
+            builder.CloseComponent();
+        };
     }
 }

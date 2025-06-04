@@ -1,66 +1,88 @@
-﻿@if (_user is not null)
+﻿
+
+
+
+@if (_user is not null)
 {
     <MudCardContent>
         <MudCard Class="px-4">
 
-            <MudItem>
-
-                <MudText Typo="Typo.h5">User Information</MudText>
-
-                @*
-            Process :
-            creating a bool var for each field that will implement a child component when interacted with a button
-            so the current UI will remain the same and the user can update the data
-            *@
 
 
-                @if (_renderUpdateUserLastnameComponent)
-                {
-                    <BlazorApp2.UI.Components.UserData.UserInfos.UpdateUserComponent OnCancelOrUpdateEventTriggered="RenderUpdateUserLastnameComponent" User="_user" />
-                }
-                else
-                {
+            <MudText Typo="Typo.h5">User Information</MudText>
 
-                    <MudGrid>
-                        <MudItem>
-                            <MudTextField @bind-Value="_user.LastName" Label="Lastname" Variant="Variant.Outlined" Margin="Margin.Dense" ReadOnly="true" />
-                        </MudItem>
+            @*
+        Process :
+        creating a bool var for each field that will implement a child component when interacted with a button
+        so the current UI will remain the same and the user can update the data
+        *@
+
+
+            @if (_editing == nameof(_user.Lastname))
+            {
+                @RenderFragmentField(nameof(_user.Lastname))
+            }
+            else
+            {
+
+                <MudGrid>
+
+                    <MudItem xs="8">
+                        <MudTextField @bind-Value="_user.Lastname" Label="Lastname" Variant="Variant.Outlined" Margin="Margin.Dense" ReadOnly="true" />
+                    </MudItem>
+
+                    <MudItem xs="2">
                         <MudButton>
-                            <MudIconButton Icon="@Icons.Material.Filled.Edit" Color="Color.Primary" OnClick="() => _renderUpdateUserLastnameComponent=true" Size="Size.Small" Variant="Variant.Filled" />
+                            <MudIconButton Icon="@Icons.Material.Filled.Edit" Color="Color.Primary" OnClick="() => Editing(nameof(_user.Lastname))" Size="Size.Small" Variant="Variant.Filled" />
                         </MudButton>
-                    </MudGrid>
+                    </MudItem>
 
-
-                }
-
-                @if (_renderUpdateUserFirstnameComponent)
-                {
-                    <BlazorApp2.UI.Components.UserData.Address.UpdateAddressComponent OnCancelOrUpdateEventTriggered="RenderUpdateUserFirstnameComponent" User="_user" />
-                }
-                else
-                {
-                    <MudGrid>
-                        <MudItem>
-                            <MudTextField @bind-Value="_user.FirstName" Label="Firstname" Variant="Variant.Outlined" Margin="Margin.Dense" ReadOnly="true" />
-                        </MudItem>
+                    <MudItem xs="2">
                         <MudButton>
-                            <MudIconButton Icon="@Icons.Material.Filled.Edit" Color="Color.Primary" OnClick="() => _renderUpdateUserFirstnameComponent=true" Size="Size.Small" Variant="Variant.Filled" />
+                           
                         </MudButton>
-                    </MudGrid>
+                    </MudItem>
+                </MudGrid>
+            }
+
+            @if (_editing == nameof(_user.Firstname))
+            {
+                @RenderFragmentField(nameof(_user.Firstname))
+            }
+            else
+            {
+
+                <MudGrid>
+
+                    <MudItem xs="8">
+                        <MudTextField @bind-Value="_user.Firstname" Label="Firstname" Variant="Variant.Outlined" Margin="Margin.Dense" ReadOnly="true" />
+                    </MudItem>
+
+                    <MudItem xs="2">
+                        <MudButton>
+                            <MudIconButton Icon="@Icons.Material.Filled.Edit" Color="Color.Primary" OnClick="() => Editing(nameof(_user.Firstname))" Size="Size.Small" Variant="Variant.Filled" />
+                        </MudButton>
+                    </MudItem>
+
+                    <MudItem xs="2">
+
+                    </MudItem>
+
+                </MudGrid>
+            }
 
 
-                }
+            <MudTextField @bind-Value="_user.Mail" Label="Mail" Variant="Variant.Outlined" Margin="Margin.Dense" ReadOnly="true" />
+
+            
 
 
 
 
 
-                <MudTextField @bind-Value="_user.Mail" Label="Mail" Variant="Variant.Outlined" Margin="Margin.Dense" ReadOnly="true" />
 
 
 
-
-            </MudItem>
 
 
 

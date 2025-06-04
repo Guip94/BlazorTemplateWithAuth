@@ -33,31 +33,8 @@ namespace BlazorApp2.UI.Components.UserData.UserInfos
         [Inject]
         private IUserRepository _userRepository { get; set; }
 
-        [Parameter]
-        public UserDTO _user { get; set; }
-
-
-
-
-        private bool _renderUpdateUserLastnameField { get; set; } = false;
-
-
-       
-        private bool _renderUpdateUserFirstnameField { get; set; } = false;
-
-
-      
-        private bool _renderUpdateUserMailField { get; set; } = false;
-
 
         private MudForm _updateUserForm { get; set; } = new MudForm();
-
-
-
-
-        [Parameter]
-        public EventCallback<bool> OnCancelOrUpdateEventTriggered { get; set; }
-
 
 
 
@@ -65,7 +42,21 @@ namespace BlazorApp2.UI.Components.UserData.UserInfos
         public UserDTO UserDTO_ { get; set; }
 
 
-        private UserDTO _userDTO;
+
+        [Parameter]
+        public string FieldName { get; set; }
+
+
+        [Parameter]
+        public EventCallback OnCancelOrUpdateEventTriggered { get; set; }
+
+
+        private string _editing;
+
+
+
+
+       
 
         protected override async Task OnInitializedAsync()
         {
@@ -77,16 +68,15 @@ namespace BlazorApp2.UI.Components.UserData.UserInfos
 
                 await _authorizingService.GetCurrentAuthorization();
 
-                _userDTO = UserDTO_;
-
-
 
 
             }
-         
+
+
+
         }
 
-       
+
         private async Task OnSubmit(Expression<Func<UserDTO, object>> propertySelector)
         {
 
@@ -111,48 +101,43 @@ namespace BlazorApp2.UI.Components.UserData.UserInfos
 
                     int userId = int.Parse(authState.User.Claims.FirstOrDefault(c => c.Type is ClaimTypes.NameIdentifier)!.Value);
 
-                  
-                        var listOfTypes = UserDTO_.GetType().GetProperties()
-                            .Where(p => p.GetValue(UserDTO_) is not null)
-                            .Select(p => p.PropertyType)
-                            .ToList();
 
-        
+                    // Get the value of the property
+                    var listOfTypes = UserDTO_.GetType().GetProperties().ToList();
+
 
                     foreach (var type in listOfTypes)
+                    {
+
+
+                        CommandResult rslt = type.Name switch
                         {
-                        if (propertyName == type.Name)
-                            {
-                                
-                                CommandResult rslt = await _userRepository.ExecuteAsync(new UpdateUserFirstnameCommand(userId, propertySelector.ToString()));
-                                if (!rslt.IsSuccess) { CommandResult.Failure($"Error: {rslt.ErrorMessage}"); }
-                                else
-                                {
-                                    _snackbar.Add("Firstname updated successfully", Severity.Success);
-                                    _renderUpdateUserFirstnameField = false;
-                                    await InvokeAsync(StateHasChanged);
-                                    await OnCancelOrUpdateEventTriggered.InvokeAsync(true);
-                                }
+                            nameof(UserDTO.Firstname) => await _userRepository.ExecuteAsync(new UpdateUserFirstnameCommand(userId, propertySelector.ToString())),
+                            nameof(UserDTO.Lastname) => await _userRepository.ExecuteAsync(new UpdateUserLastnameCommand(userId, propertySelector.ToString())),
+                            _ => CommandResult.Failure("Invalid property name")
 
 
-                            }
-                            if (propertyName == type.Name)
-                            {
-                                CommandResult rslt = await _userRepository.ExecuteAsync(new UpdateUserLastnameCommand(userId, propertySelector.ToString()));
-                                if (!rslt.IsSuccess) { CommandResult.Failure($"Error: {rslt.ErrorMessage}"); }
-                                else
-                                {
-                                    _snackbar.Add("Lastname updated successfully", Severity.Success);
-                                    _renderUpdateUserLastnameField = false;
-                                    await InvokeAsync(StateHasChanged);
-                                    await OnCancelOrUpdateEventTriggered.InvokeAsync(true);
-                            }
-                            }
+                        };
 
+                        if (!rslt.IsSuccess)
+                        {
+                            _snackbar.Add($"An error occrued while updating : {rslt.ErrorMessage}");
+                        }
+                        else
+                        {
+
+                            _snackbar.Add($"{propertyName} updated with success");
+                            StateHasChanged();
+                            await OnCancelOrUpdateEventTriggered.InvokeAsync(true);
                         }
 
+
                     }
-                  
+
+                    _editing = string.Empty;
+
+                }
+
 
 
 
@@ -164,19 +149,27 @@ namespace BlazorApp2.UI.Components.UserData.UserInfos
             }
         }
 
-        private async Task OnCancel() 
+        private async Task OnCancel()
         {
-            _renderUpdateUserLastnameField = false;
-            _renderUpdateUserFirstnameField = false;
-            _renderUpdateUserMailField = false;
 
+            _editing = string.Empty;
             await OnCancelOrUpdateEventTriggered.InvokeAsync(true);
         }
 
 
 
+        protected override void OnParametersSet()
+        {
+            _editing = FieldName switch
+            {
+                "Firstname" => nameof(UserDTO_.Firstname),
+                "Lastname" => nameof(UserDTO_.Lastname),
+                _ => ""
+            };
 
+        
 
+        }
 
 
     }

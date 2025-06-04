@@ -7,12 +7,12 @@ namespace BlazorApp2.UI.Components.UserData.Models
 
         [Required(ErrorMessage = "First name is required")]
         [MinLength(1)]
-        public string FirstName { get; set; }
+        public string Firstname { get; set; }
 
 
         [Required(ErrorMessage = "Last name is required")]
         [MinLength(1)]
-        public string LastName { get; set; }
+        public string Lastname { get; set; }
 
         [Required(ErrorMessage = "Mail is required")]
         [DataType(DataType.EmailAddress)]
