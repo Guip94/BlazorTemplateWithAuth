@@ -34,9 +34,6 @@ namespace BlazorApp2.UI.Components.UserData.UserInfos
         private IUserRepository _userRepository { get; set; }
 
 
-        private MudForm _updateUserForm { get; set; } = new MudForm();
-
-
 
         [Parameter]
         public UserDTO UserDTO_ { get; set; }
@@ -55,8 +52,11 @@ namespace BlazorApp2.UI.Components.UserData.UserInfos
 
 
 
+        private MudForm _updateUserForm { get; set; } = new MudForm();
 
-       
+
+
+
 
         protected override async Task OnInitializedAsync()
         {
@@ -88,65 +88,77 @@ namespace BlazorApp2.UI.Components.UserData.UserInfos
             string propertyName = member?.Member.Name ?? throw new ArgumentException("Invalid property selector");
 
 
-            try
+
+            // keep verifying the user is authenticated
+            var authState = await _authenticationStateProvider.GetAuthenticationStateAsync();
+
+
+            if (authState.User.Identity!.IsAuthenticated)
             {
-                // keep verifying the user is authenticated
-                var authState = await _authenticationStateProvider.GetAuthenticationStateAsync();
+                // need authorization from current token to update user profile
+                await _authorizingService.GetCurrentAuthorization();
 
-                if (authState.User.Identity!.IsAuthenticated)
+                await _updateUserForm.Validate();
+
+
+
+                if (_updateUserForm.IsValid)
                 {
-                    // need authorization from current token to update user profile
-                    await _authorizingService.GetCurrentAuthorization();
-
-
-                    int userId = int.Parse(authState.User.Claims.FirstOrDefault(c => c.Type is ClaimTypes.NameIdentifier)!.Value);
-
-
-                    // Get the value of the property
-                    var listOfTypes = UserDTO_.GetType().GetProperties().ToList();
-
-
-                    foreach (var type in listOfTypes)
+                    try
                     {
+                        int userId = int.Parse(authState.User.Claims.FirstOrDefault(c => c.Type is ClaimTypes.NameIdentifier)!.Value);
 
+                        // Get the value of the property
+                        var listOfTypes = UserDTO_.GetType().GetProperties().ToList();
 
-                        CommandResult rslt = type.Name switch
+                        foreach (var type in listOfTypes)
                         {
-                            nameof(UserDTO.Firstname) => await _userRepository.ExecuteAsync(new UpdateUserFirstnameCommand(userId, propertySelector.ToString())),
-                            nameof(UserDTO.Lastname) => await _userRepository.ExecuteAsync(new UpdateUserLastnameCommand(userId, propertySelector.ToString())),
-                            _ => CommandResult.Failure("Invalid property name")
+
+                            //lastname
+                            if (type.Name == propertyName)
+                            {
+
+                                CommandResult rslt = await _userRepository.ExecuteAsync(new UpdateUserLastnameCommand(userId, UserDTO_.Lastname));
+
+                                if (!rslt.IsSuccess) { CommandResult.Failure($"An error occurred while updating the user: {rslt.ErrorMessage}"); }
+
+                                CommandResult.Success();
+                                _snackbar.Add($"{propertyName} updated with success");
+                                StateHasChanged();
+                                await OnCancelOrUpdateEventTriggered.InvokeAsync(true);
+
+                            }
+
+                            //firstname
+                            if (type.Name == propertyName)
+                            {
+                                CommandResult rslt = await _userRepository.ExecuteAsync(new UpdateUserFirstnameCommand(userId, UserDTO_.Firstname));
+                                if (!rslt.IsSuccess) { CommandResult.Failure($"An error occurred while updating the user: {rslt.ErrorMessage}"); }
+                                CommandResult.Success();
+                                _snackbar.Add($"{propertyName} updated with success");
+                                StateHasChanged();
+                                await OnCancelOrUpdateEventTriggered.InvokeAsync(true);
+                            }
 
 
-                        };
-
-                        if (!rslt.IsSuccess)
-                        {
-                            _snackbar.Add($"An error occrued while updating : {rslt.ErrorMessage}");
                         }
-                        else
-                        {
 
-                            _snackbar.Add($"{propertyName} updated with success");
-                            StateHasChanged();
-                            await OnCancelOrUpdateEventTriggered.InvokeAsync(true);
-                        }
-
+                        _editing = string.Empty;
 
                     }
 
-                    _editing = string.Empty;
+
+
+                    catch (Exception ex)
+                    {
+                        _snackbar.Add($"An error occurred while updating the user: {ex.Message}", Severity.Error);
+
+                    }
 
                 }
 
-
-
-
             }
-            catch (Exception ex)
-            {
-                _snackbar.Add($"An error occurred while updating the user: {ex.Message}", Severity.Error);
 
-            }
         }
 
         private async Task OnCancel()
@@ -167,7 +179,7 @@ namespace BlazorApp2.UI.Components.UserData.UserInfos
                 _ => ""
             };
 
-        
+
 
         }
 

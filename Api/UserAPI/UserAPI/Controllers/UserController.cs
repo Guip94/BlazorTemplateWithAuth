@@ -67,7 +67,7 @@ namespace UserAPI.Controllers
 
     [HttpPatch("updatefirstname/{id}")]
     [HttpPut("updatefirstname/{id}")]
-    public IActionResult UpdateUserFirstname(int id, UpdateUserDTO user)
+    public IActionResult UpdateUserFirstname(int id, [FromBody] UpdateUserDTO user)
     {
             try
             {
@@ -82,7 +82,7 @@ namespace UserAPI.Controllers
 
         [HttpPatch("updatelastname/{id}")]
         [HttpPut("updatelastname/{id}")]
-        public IActionResult UpdateUserLastname(int id, UpdateUserDTO user)
+        public IActionResult UpdateUserLastname(int id, [FromBody] UpdateUserDTO user)
         {
             try
             {
