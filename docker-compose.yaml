@@ -34,7 +34,9 @@ services:
     build: ./Api/UserAPI
     volumes:
       - user-shared:/app/shared
-      - C:\Users\pinch\Certs_For_Dev:/app/certs:ro
+      - ./Certs:/app/certs:ro
+
+     
     networks:
       - user-network
     ports:
@@ -46,6 +48,10 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development  ##### à utiliser si on spécifie qu'on est en DVP, sinon commenter dans program.cs
       - ASPNETCORE_URLS=https://+:443;http://+:80
       - DOTNET_HTTPS_PORT=443
+      - CERTIFICATE_PATH=/app/certs/dev-certificate.pfx
+      - CERTIFICATE_PASSWORD=${CertPwd}
+
+
 
     # entrypoint: ["sh", "-c", "ls -l /app/certs && sleep 3600"]
 

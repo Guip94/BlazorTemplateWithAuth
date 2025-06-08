@@ -482,54 +482,17 @@ GO
         GO
 
     --#endregion
-    --#region : UpdateUserFirstname
-
-      CREATE PROCEDURE [DbUserStandard].[UpdateUserFirstname]
-           @userId INT,
-           @firstname NVARCHAR (30)
-        AS
-          
-        BEGIN
 
 
-            BEGIN TRY
-                IF LEN(TRIM(@firstname)) < 0
-                    BEGIN
-                        RAISERROR(N'Invalid format for firstname',17,1)
-                        RETURN;
-                    END
-
-                
-                UPDATE [DbUserStandard].[User]
-                SET Firstname=@firstname
-                WHERE Id=@userId
-
-              
-            END TRY
-
-            BEGIN CATCH
-
-                DECLARE @ErrorMessage NVARCHAR(4000) = ERROR_MESSAGE();
-                DECLARE @ErrorSeverity INT = ERROR_SEVERITY();
-                DECLARE @ErrorState INT = ERROR_STATE();
 
 
-                RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState)
-
-            END CATCH
+    --#region : UpdateUserNames
 
 
-        END
-        GO
-
-
-    --#endregion
-    --#region : UpdateUserLastname
-
-
-    CREATE PROCEDURE [DbUserStandard].[UpdateUserLastname]
+    CREATE PROCEDURE [DbUserStandard].[UpdateUserNames]
     @userId INT,
-    @lastname NVARCHAR(30)
+    @lastname NVARCHAR(30),
+    @firstname NVARCHAR(30)
 
     AS
 
@@ -542,8 +505,21 @@ GO
             RETURN;
         END
 
+         if(LEN(@firstname)< 1)
+        BEGIN
+            RAISERROR(N'Firstname too short', 17,1)
+            RETURN;
+        END
+
+
+
+
+
+
+
+
         UPDATE [DbUserStandard].[User] 
-        SET Lastname=@lastname 
+        SET Lastname=@lastname, Firstname=@firstname 
         WHERE Id=@userId
 
 

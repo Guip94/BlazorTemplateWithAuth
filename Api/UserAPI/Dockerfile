@@ -56,7 +56,7 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 
 
-COPY ["UserAPI/appsettings.json.env", "./appsettings.json.env"]
+
 
 ENTRYPOINT ["dotnet", "UserAPI.dll"]
 

@@ -102,7 +102,7 @@ namespace Domain.Service
         {
             try
             {
-                User rslt = _connection.ExecuteReader("[DbUserStandard].[GetUserByIdWithToken]", sp => sp.ToUserToken(), true, query).SingleOrDefault();
+                User? rslt = _connection.ExecuteReader("[DbUserStandard].[GetUserByIdWithToken]", sp => sp.ToUserToken(), true, query).SingleOrDefault();
                 if (rslt is null) { QueryResult<User>.Failure("Erreur de requête"); }
 
                 return QueryResult<User>.Success(rslt);
@@ -116,7 +116,7 @@ namespace Domain.Service
         {
             try
             {
-            User rslt = _connection.ExecuteReader("[DbUserStandard].[GetUserFromRToken]", sp=>sp.ToUserRole(), true, query).SingleOrDefault();
+            User rslt = _connection.ExecuteReader("[DbUserStandard].[GetUserFromRToken]", sp=>sp.ToUserRole(), true, query).SingleOrDefault()!;
                 if (rslt is null) { return QueryResult<User>.Failure("User non trouvé"); }
 
                 return QueryResult<User>.Success(rslt);
@@ -129,7 +129,7 @@ namespace Domain.Service
             try
             {
                 int rslt = _connection.ExecuteNonQuery("[DbUserStandard].[InsertRTokenToUser]", true, command);
-                if (rslt != 1) { return CommandResult.Failure("echec de la command"); }
+                if (rslt != 1) { return CommandResult.Failure("command failure"); }
                 return CommandResult.Success();
 
             }
@@ -153,12 +153,12 @@ namespace Domain.Service
             catch (Exception ex) { return QueryResult<User>.Failure(ex.Message, ex); }
         }
 
-        public CommandResult Execute(UpdateUserFirstname command)
+        public CommandResult Execute(UpdateUserNamesCommand command)
         {
             try
             {
-                int rslt = _connection.ExecuteNonQuery("[DbUserStandard].[UpdateUserFirstname]", true, command);
-                if (rslt is not 1) { CommandResult.Failure(" Update command faikure"); }
+                int rslt = _connection.ExecuteNonQuery("[DbUserStandard].[UpdateUserNames]", true, command);
+                if (rslt is not 1) { CommandResult.Failure(" Update command failure"); }
 
                 return CommandResult.Success();
 
@@ -169,18 +169,6 @@ namespace Domain.Service
             }
         }
 
-        public CommandResult Execute(UpdateUserLastname command)
-        {
-            try
-            {
-                int rslt = _connection.ExecuteNonQuery("[DbUserStandard].[UpdateUserLastname]", true, command);
-                if (rslt is not 1) { return CommandResult.Failure("Update command failure"); }
-                return CommandResult.Success();
-            }
-            catch (Exception ex)
-            {
-                return CommandResult.Failure(ex.Message, ex);
-            }
-        }
+      
     }
 }

@@ -13,7 +13,6 @@ namespace Domain.Command.User
         {
             Id = id;
             Mail = mail;
-            
             Pwd = pwd;
         }
         public int Id { get;}

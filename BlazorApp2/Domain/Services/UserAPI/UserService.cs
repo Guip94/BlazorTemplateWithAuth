@@ -1,5 +1,5 @@
 ﻿using Domain.Repositories.UserAPI;
-using Entities.Commands.UserAPICommands.UserCommands;
+using Entities.Commands.UserAPICommands.AdressCommands.UpdateUserNamesCommand;
 using Entities.Entities.UserAPI;
 using Entities.Queries.UserAPIQueries.UserQueries;
 using LocalNuggetTools.ResultPattern;
@@ -22,13 +22,13 @@ namespace Domain.Services.UserAPI
             _httpClient = httpClient.CreateClient("UserAPI");
         }
 
-        public async Task<CommandResult> ExecuteAsync(UpdateUserFirstnameCommand command)
+        public async Task<CommandResult> ExecuteAsync(UpdateUserNamesCommand command)
         {
             try
             {
                 JsonContent content = JsonContent.Create(command);
 
-                using (HttpResponseMessage response = await _httpClient.PutAsync($"/api/User/updatefirstname/{command.Id}", content))
+                using (HttpResponseMessage response = await _httpClient.PutAsync($"/api/User/updateusernames/{command.Id}", content))
                 {
                     if (!response.IsSuccessStatusCode)
                     {
@@ -44,28 +44,7 @@ namespace Domain.Services.UserAPI
             }
         }
 
-        public async Task<CommandResult> ExecuteAsync(UpdateUserLastnameCommand command)
-        {
-            try
-            {
-                JsonContent content = JsonContent.Create(command);
-                using (HttpResponseMessage response = await _httpClient.PutAsync($"api/User/updatelastname/{command.Id}", content))
-                {
-
-                    if (!response.IsSuccessStatusCode)
-                    {
-                        return CommandResult.Failure($"Error: {response.StatusCode} - {response.ReasonPhrase}");
-                    }
-                    return CommandResult.Success();
-
-                }
-            }
-            catch (Exception ex)
-            {
-                return CommandResult.Failure(ex.Message);
-            }
-        }
-
+   
         public async Task<QueryResult<User>> ExecuteAsync(GetUserQuery query)
         {
             try

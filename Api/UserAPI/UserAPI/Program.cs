@@ -43,31 +43,46 @@ builder.Services.AddControllers();
 
 #region : configuration Https
 
-//permettre la lecture du json.env  ==> ajout dans le SDK
 var configuration = new ConfigurationBuilder()
-    .AddJsonFile("appsettings.json.env", optional:false, reloadOnChange: true)
+    .AddEnvironmentVariables()
     .Build();
 
+string CertificatePath = configuration["CERTIFICATE_PATH"]!;
+string Pwd = configuration["CERTIFICATE_PASSWORD"]!;
 
+Console.WriteLine($"CERTIFICATE_PATH = '{CertificatePath}'");
+Console.WriteLine($"CERTIFICATE_PASSWORD = {(string.IsNullOrEmpty(Pwd) ? "NULL/EMPTY" : "SET")}");
 
-
-
-string CertificatePath = configuration["certificatePfx:certificatePath"]!;
-string Pwd = configuration["certificatePfx:certificatePassword"]!;
-
-
-
-
-X509Certificate2 certificate = new X509Certificate2(CertificatePath, Pwd);
-
-builder.WebHost.ConfigureKestrel(options =>
+if (!File.Exists(CertificatePath))
 {
-    options.ListenAnyIP(80);
-    options.ListenAnyIP(443, listenOptions =>
+    Console.Error.WriteLine($"ERROR: Certificate file not found at path: {CertificatePath}");
+    // Exit gracefully or throw a custom error with a clear message
+    Environment.Exit(1);
+}
+
+try
+{
+    X509Certificate2 certificate = new X509Certificate2(
+        CertificatePath,
+        Pwd,
+        X509KeyStorageFlags.MachineKeySet | X509KeyStorageFlags.Exportable
+    );
+
+    builder.WebHost.ConfigureKestrel(options =>
+    {
+        options.ListenAnyIP(80);
+        options.ListenAnyIP(443, listenOptions =>
         {
             listenOptions.UseHttps(certificate);
         });
-});
+    });
+}
+catch (Exception ex)
+{
+    Console.Error.WriteLine($"ERROR loading certificate: {ex}");
+    Environment.Exit(1);
+}
+
 
 #endregion
 

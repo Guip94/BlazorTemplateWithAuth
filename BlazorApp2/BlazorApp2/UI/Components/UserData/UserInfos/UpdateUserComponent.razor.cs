@@ -9,8 +9,8 @@ using Entities.Queries.UserAPIQueries.UserQueries;
 using Entities.Entities.UserAPI;
 using System.Security.Claims;
 using MudBlazor.Extensions;
-using Entities.Commands.UserAPICommands.UserCommands;
 using System.Linq.Expressions;
+using Entities.Commands.UserAPICommands.AdressCommands.UpdateUserNamesCommand;
 
 namespace BlazorApp2.UI.Components.UserData.UserInfos
 {
@@ -118,7 +118,7 @@ namespace BlazorApp2.UI.Components.UserData.UserInfos
                             if (type.Name == propertyName)
                             {
 
-                                CommandResult rslt = await _userRepository.ExecuteAsync(new UpdateUserLastnameCommand(userId, UserDTO_.Lastname));
+                                CommandResult rslt = await _userRepository.ExecuteAsync(new UpdateUserNamesCommand(userId, UserDTO_.Lastname, UserDTO_.Firstname));
 
                                 if (!rslt.IsSuccess) { CommandResult.Failure($"An error occurred while updating the user: {rslt.ErrorMessage}"); }
 
@@ -132,7 +132,7 @@ namespace BlazorApp2.UI.Components.UserData.UserInfos
                             //firstname
                             if (type.Name == propertyName)
                             {
-                                CommandResult rslt = await _userRepository.ExecuteAsync(new UpdateUserFirstnameCommand(userId, UserDTO_.Firstname));
+                                CommandResult rslt = await _userRepository.ExecuteAsync(new UpdateUserNamesCommand(userId, UserDTO_.Lastname,UserDTO_.Firstname));
                                 if (!rslt.IsSuccess) { CommandResult.Failure($"An error occurred while updating the user: {rslt.ErrorMessage}"); }
                                 CommandResult.Success();
                                 _snackbar.Add($"{propertyName} updated with success");
@@ -152,6 +152,7 @@ namespace BlazorApp2.UI.Components.UserData.UserInfos
                     catch (Exception ex)
                     {
                         _snackbar.Add($"An error occurred while updating the user: {ex.Message}", Severity.Error);
+                        _editing = string.Empty;
 
                     }
 

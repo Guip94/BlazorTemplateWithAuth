@@ -22,8 +22,8 @@ namespace Domain.Repository
         IQueryHandler<GetUserByIdWithToken, User>,
         IQueryHandler<GetUserFromTokenQuery, User>,
         IQueryHandler<GetUserById, User>,
-        ICommandHandler<UpdateUserFirstname>,
-        ICommandHandler<UpdateUserLastname>
+        ICommandHandler<UpdateUserNamesCommand>
+
 
 
     {
